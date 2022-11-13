@@ -37,12 +37,13 @@
                 </div>
             </div>
         </nav>
+</br>
         
         <!-- Contact Section-->
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Isi Testimoni kalian</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">What kind of gadget do you want?</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>

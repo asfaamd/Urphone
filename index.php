@@ -46,7 +46,8 @@
             
                 <!-- Masthead Subheading-->
                 <p class="masthead-subheading font-weight-light mb-0">You can find your gadget based on your need with best price here!</p>
-                <br>
+                </br>
+                </br>
                 <button type="button" class="btn btn-primary btn-md"> Click Here!</button>  
             </div>
         </header>
