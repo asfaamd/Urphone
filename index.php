@@ -16,6 +16,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
+
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
@@ -50,16 +51,16 @@
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Testimoni Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Testimoni</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Testimonials</h2>
                 <img src="/media/images/cat.jpg" class="img-fluid">
             </div>
-            
+
         </section>
         <!-- About Section-->
         <section class="page-section bg-secondary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-white">Articles</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -73,6 +74,7 @@
                 </div>
             </div>
         </section>
+        
         <!-- Contact Section-->
         <section class="page-section" id="contact">
             <div class="container">
