@@ -73,7 +73,7 @@
                                 <label for="phone">Phone number</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
-                            
+
                             <!---->
                             <!-- This is what your users will see when the form-->
                             <!-- has successfully submitted-->
@@ -90,7 +90,7 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl" href="/index.php">Login</button>
+                            <a href="index_member.php" button class="btn btn-primary btn-xl">Login</button> </a>
                         </form>
                     </div>
                 </div>
