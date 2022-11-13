@@ -37,48 +37,71 @@
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
-        <header class="masthead bg-secondary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Find your very own personalized gadget here!</h1>
-            
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">You can find your gadget based on your need with best price here!</p>
-                <p>    </p>
-                <button type="button" class="btn btn-primary btn-md"> Click Here!</button>  
-            </div>
-        </header>
-
-        <!-- Testimoni Section-->
-        <section class="page-section portfolio" id="portfolio">
+        
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
             <div class="container">
-                <!-- Testimoni Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Testimonials</h2>
-                <img src="/media/images/cat.jpg" class="img-fluid">
-            </div>
-
-        </section>
-        <!-- About Section-->
-        <section class="page-section bg-secondary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">Articles</h2>
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Isi Testimoni kalian</h2>
                 <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
+                <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! Cumque.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto neque aliquam voluptates, minus quam corrupti amet. Rem quaerat non qui eveniet ea repellat nulla. Quam aliquam quidem accusantium sequi tempora.</p></div>
+                <!-- Contact Section Form-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    
+                                    <br />
+                                    </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
-
+        
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
