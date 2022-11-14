@@ -57,7 +57,13 @@
             <div class="container">
                 <!-- Testimoni Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Testimonials</h2>
-                <img src="/media/images/cat.jpg" class="img-fluid">
+                <!--<img src="/media/images/cat.jpg" class="img-fluid">-->
+                </br>
+                <div class="ms-auto"><p class="lead">Lorem ipsum, dolor sit amet consectetur 
+                        adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
+                        error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
+                        Cumque.</p></div>
+                
             </div>
 
         </section>
@@ -74,8 +80,14 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! Cumque.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto neque aliquam voluptates, minus quam corrupti amet. Rem quaerat non qui eveniet ea repellat nulla. Quam aliquam quidem accusantium sequi tempora.</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">Lorem ipsum, dolor sit amet consectetur 
+                        adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
+                        error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
+                        Cumque.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Iusto neque aliquam voluptates, minus quam corrupti amet. 
+                        Rem quaerat non qui eveniet ea repellat nulla. Quam aliquam quidem accusantium 
+                        sequi tempora.</p></div>
                 </div>
             </div>
         </section>
