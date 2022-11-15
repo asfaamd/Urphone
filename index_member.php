@@ -110,7 +110,7 @@
                     <div class="col-lg-4">
                         <h4 class="text-uppercase mb-4">About UrPhone</h4>
                         <p class="lead mb-0">
-                            Urphone is good
+                        Urphone will help you to find your desired gadgets!
                     
                         </p>
                     </div>

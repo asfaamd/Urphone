@@ -27,7 +27,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#find_gadget">Find Gadget</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="find_gadget.php">Find Gadget</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Articles</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Reviews</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Wishlist</a></li>
@@ -47,7 +47,7 @@
                 <p class="masthead-subheading font-weight-light mb-0">You can find your gadget based on your need with best price here!</p>
                 </br>
                 </br>
-                <button type="button" class="btn btn-primary btn-md"> Click Here!</button>  
+                <a href = "find_gadget.php" button type="button" class="btn btn-primary btn-md"> Click Here!</button> </a> 
             </div>
         </header>
 
@@ -112,7 +112,7 @@
                     <div class="col-lg-4">
                         <h4 class="text-uppercase mb-4">About UrPhone</h4>
                         <p class="lead mb-0">
-                            Urphone is good
+                            Urphone will help you to find your desired gadgets!S
                     
                         </p>
                     </div>
