@@ -57,8 +57,15 @@
             <div class="container">
                 <!-- Testimoni Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Testimonials</h2>
-                <img src="/media/images/cat.jpg" class="img-fluid">
+                <!--<img src="/media/images/cat.jpg" class="img-fluid">-->
+                </br>
+                <div class="ms-auto"><p class="lead">Lorem ipsum, dolor sit amet consectetur 
+                        adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
+                        error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
+                        Cumque.</p></div>
+                
             </div>
+        </section>
 
         </section>
         <!-- About Section-->
