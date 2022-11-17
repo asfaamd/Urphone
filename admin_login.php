@@ -21,7 +21,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="index.php"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
+                <a class="navbar-brand" href="#page-top"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -32,7 +32,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#articles.php">Articles</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#review.php">Reviews</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#wishlist.php">Wishlist</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php" style="color:Orange">Login</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,7 +43,7 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Login</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Sign up</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -73,7 +73,8 @@
                                 <label for="phone">Phone number</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
-
+                            
+                            <!-- Submit success message-->
                             <!---->
                             <!-- This is what your users will see when the form-->
                             <!-- has successfully submitted-->
@@ -90,15 +91,7 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <a href="index_member.php" button class="btn btn-primary btn-xl">Login</button> </a>
-                            <!-- Signup Button-->
-                            </br>
-                            </br>
-                            Don't have account?
-                            </br>
-                            <a href="signup.php" button class="btn btn-primary btn-xl">Signup</button> </a>
-                            </br>
-                            <a href="admin_login.php" button class="btn btn-primary btn-xl">Login as admin</button> </a>
+                            <a href="index_admin.php" button class="btn btn-primary btn-xl">Login</button> </a>
                         </form>
                     </div>
                 </div>
