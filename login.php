@@ -90,16 +90,18 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <a href="index_member.php" button class="btn btn-primary btn-xl">Login</button> </a>
+                            <a href="index_member.php" button class="btn btn-primary btn-xl me-2">Login</button> </a>
                             <!-- Signup Button-->
                             </br>
+                            <br>
+                                Don't have account?
                             </br>
-                            Don't have account?
-                            </br>
-                            <a href="signup.php" button class="btn btn-primary btn-xl">Signup</button> </a>
+                            <a href="signup.php" button class="btn btn-primary btn-xl me-2">Signup</button> </a>
+                            <br>
+                                Are you admin?
                             </br>
                             <a href="admin_login.php" button class="btn btn-primary btn-xl">Login as admin</button> </a>
-                        </form>
+                            </form>
                     </div>
                 </div>
             </div>
