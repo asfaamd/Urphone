@@ -99,6 +99,7 @@
                                     <br>Are you admin?</br>
                                     <a href="admin_login.php" button class="btn btn-primary btn-light text-info border-info btn-xl">Login as admin</button> </a>
                                 </div>
+                            </div>
                             </form>
                     </div>
                 </div>

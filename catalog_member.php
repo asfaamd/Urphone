@@ -37,7 +37,10 @@
                 </div>
             </div>
         </nav>
-</br>
+        </br>
+        <div class="container">
+            Recommendation / <span class="text-info">Apple Watch Series 6</span>
+        </div>
         
         <!-- Footer-->
         <footer class="footer text-center">

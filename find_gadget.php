@@ -234,7 +234,7 @@
         <br>
         </br>
         <div class="container text-center">
-            <a button type="button" class="btn btn-primary btn-lg " href="find_gadget.php"> Search!</button> </a>
+            <a button type="button" class="btn btn-primary btn-lg btn-info text-white" href="recommendation.php"> Search!</button> </a>
         </div>
 
         <br>
