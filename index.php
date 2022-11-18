@@ -61,34 +61,11 @@
                 <!--<img src="/media/images/cat.jpg" class="img-fluid">-->
                 <br>
                 </br>
-
-                <div class="ms-auto">
-                    <p class="lead">
-                        <h4 class="text-info">Samsung Z Flip</h4>
-                        Lorem ipsum, dolor sit amet consectetur 
-                        adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
-                        error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
-                        Cumque.
-                    </p>
-                    <p class="text-muted">Ini nama user</p>
-                </div>
-
+                <h4 class="text-center"> Login to see what people say about your desired product!</h4>
                 <br>
                 </br>
-
-                <div class="ms-auto">
-                    <p class="lead">
-                        <h4 class="text-info">Samsung Watch</h4>
-                        Lorem ipsum, dolor sit amet consectetur 
-                        adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
-                        error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
-                        Cumque.
-                    </p>
-                    <p class="text-muted">Sebut saja Fulan</p>
-                </div>
-
                 <div class="text-center">
-                    <a href="#" class="btn btn-primary btn-info text-light">Click for more review!</a>
+                    <a href="login.php" class="btn btn-primary btn-lg btn-info text-light">Login now!</a>
                 </div>
             </div>
         </section>
@@ -134,7 +111,7 @@
                 <br>
                 </br>
                 <div class="text-center">
-                    <a href="#" class="btn btn-primary btn-info text-light">Click for more articles</a>
+                    <a href="articles.php" class="btn btn-primary btn-info text-light">Click for more articles</a>
                 </div>
             </div>
         </section>
