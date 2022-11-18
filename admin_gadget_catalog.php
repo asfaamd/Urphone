@@ -35,27 +35,7 @@
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
-        <header class="masthead bg-secondary text-white text-center">
-            <div class="container d-flex align-items-center flex-column" style = "background-image:gadget.jpeg">
-                
-                <!-- Masthead Heading-->
-                <h3 class="masthead-heading mb-0">Good Morning, is there anything new? Share with the users!</h3>
-                <br>
-                </br>
-                <br>
-                </br>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href = "admin_input_gadget.php" button type="button" class="btn btn-primary btn-xl btn-info text-light">Share gadget</button> </a> 
-                </div>
-                <div class="col">
-                    <a href = "admin_input_article.php" button type="button" class="btn btn-primary btn-xl btn-info text-light">Share article</button> </a> 
-                </div>
-            </div>
-        </header>
-
+        
         
 
         <!-- Footer-->
