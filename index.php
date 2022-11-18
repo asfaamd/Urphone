@@ -59,16 +59,36 @@
                 <!-- Testimoni Section Heading-->
                 <h2 class="page-section-heading text-secondary mb-0">Testimonials</h2>
                 <!--<img src="/media/images/cat.jpg" class="img-fluid">-->
+                <br>
                 </br>
 
                 <div class="ms-auto">
                     <p class="lead">
+                        <h4 class="text-info">Samsung Z Flip</h4>
                         Lorem ipsum, dolor sit amet consectetur 
                         adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
                         error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
                         Cumque.
                     </p>
-                    <p class="text-muted">Samsung Z Flip</p>
+                    <p class="text-muted">Ini nama user</p>
+                </div>
+
+                <br>
+                </br>
+
+                <div class="ms-auto">
+                    <p class="lead">
+                        <h4 class="text-info">Samsung Watch</h4>
+                        Lorem ipsum, dolor sit amet consectetur 
+                        adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
+                        error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
+                        Cumque.
+                    </p>
+                    <p class="text-muted">Sebut saja Fulan</p>
+                </div>
+
+                <div class="text-center">
+                    <a href="#" class="btn btn-primary">Click for more review!</a>
                 </div>
             </div>
         </section>
