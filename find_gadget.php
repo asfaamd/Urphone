@@ -43,19 +43,92 @@
         <br>
         </br>
         <br>
+
+        <!--Jenis gadget dan kegunaan utama-->
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h1>What kind of gadget do you want?</h1>
+                </div>
+                <p>
+
+                </p>
+                <p>
+                    
+                </p>
+                <div class="col-lg-4 me-auto"> <h6>What are you looking for?</h6></div>
+                <div class="col-lg-4 ms-auto"> <h6>What do you mainly use your gadget for?</h6></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+            <div class="dropdown col-lg-4 me-auto">
+                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select gadget
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                        <li><a class="dropdown-item" href="#">Tablet</a></li>
+                        <li><a class="dropdown-item" href="#">Laptop</a></li>
+                        <li><a class="dropdown-item" href="#">Smart watch</a></li>
+                        <li><a class="dropdown-item" href="#">Headphones</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown col-lg-4 ms-auto">
+                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        What do you use the gadget for?
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Coding</a></li>
+                        <li><a class="dropdown-item" href="#">Drawing</a></li>
+                        <li><a class="dropdown-item" href="#">Doing homework</a></li>
+                        <li><a class="dropdown-item" href="#">Data processing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <br>
         </br>
 
-
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+        <!--Pekerjaan dan budget user-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 me-auto"> <h6>What is your occupation?</h6></div>
+                <div class="col-lg-4 ms-auto"> <h6>How much is your budget?</h6></div>
+            </div>
         </div>
+
+        <div class="container">
+            <div class="row">
+            <div class="dropdown col-lg-4 me-auto">
+                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select your occupation
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Businessman</a></li>
+                        <li><a class="dropdown-item" href="#">Employee</a></li>
+                        <li><a class="dropdown-item" href="#">Freelancer</a></li>
+                        <li><a class="dropdown-item" href="#">Programmer</a></li>
+                        <li><a class="dropdown-item" href="#">Student</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown col-lg-4 ms-auto">
+                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Budget
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">≤ Rp5.000.000</a></li>
+                        <li><a class="dropdown-item" href="#">≤ Rp10.000.000</a></li>
+                        <li><a class="dropdown-item" href="#">≤ Rp20.000.000</a></li>
+                        <li><a class="dropdown-item" href="#">≤ Rp40.000.000</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
 
         <br>
         </br>
