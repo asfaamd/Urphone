@@ -62,7 +62,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Apple Watch Series 6</h5>
                             <p><h7 class="card-text">Rp2.000.000</h7>
-                            <p><h7 class="card-text">4/5 rate</h7> <h7 class="card-text">(50 reviews)</h7>
+                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
                             <p><a href="#" class="btn btn- btn-info text-light">Read More</a>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Apple Watch Series 6</h5>
                             <p><h7 class="card-text">Rp2.000.000</h7>
-                            <p><h7 class="card-text">4/5 rate</h7> <h7 class="card-text">(50 reviews)</h7>
+                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
                             <p><a href="#" class="btn btn- btn-info text-light">Read More</a>
                         </div>
                     </div>
