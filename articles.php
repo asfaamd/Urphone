@@ -21,7 +21,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
+                <a class="navbar-brand" href="index.php"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -42,71 +42,56 @@
         </br>
         <br>
         </br>
+        <br>
+        </br>
         
-
-        <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                    <div class="row g-0">
-                        <div class="col-md-4" style="max-width:100%">
-                            <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Ini Artikel</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Detik.com</small></p>
-                                <a href="#" class="btn btn-primary">Read More</a>
-                            </div>
+        <div class="container">
+            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                <div class="row g-0">
+                    <div class="col-md-4" style="max-width:100%">
+                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Ini Artikel</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text text-muted">Detik.com</p>
+                            <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                    <div class="row g-0">
-                        <div class="col-md-4" style="max-width:100%">
-                            <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Ini Artikel</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Detik.com</small></p>
-                                <a href="#" class="btn btn-primary">Read More</a>
-                            </div>
+            </div>
+            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                <div class="row g-0">
+                    <div class="col-md-4" style="max-width:100%">
+                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Ini Artikel</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text text-muted">Detik.com</p>
+                            <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                    <div class="row g-0">
-                        <div class="col-md-4" style="max-width:100%">
-                            <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Ini Artikel</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Detik.com</small></p>
-                                <a href="#" class="btn btn-primary">Read More</a>
-                            </div>
+            </div>
+            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                <div class="row g-0">
+                    <div class="col-md-4" style="max-width:100%">
+                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Ini Artikel</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text text-muted">Detik.com</p>
+                            <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                    <div class="row g-0">
-                        <div class="col-md-4" style="max-width:100%">
-                            <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Ini Artikel</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Detik.com</small></p>
-                                <a href="#" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </div>
         
     
 

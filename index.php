@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="text-center">
-                    <a href="#" class="btn btn-primary">Click for more review!</a>
+                    <a href="#" class="btn btn-primary btn-info text-light">Click for more review!</a>
                 </div>
             </div>
         </section>
@@ -110,7 +110,7 @@
                                 <h5 class="card-title">Ini Artikel</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <p class="card-text"><small class="text-muted">Detik.com</small></p>
-                                <a href="#" class="btn btn-primary">Read More</a>
+                                <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                                 <h5 class="card-title">Ini Artikel</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <p class="card-text"><small class="text-muted">Detik.com</small></p>
-                                <a href="#" class="btn btn-primary">Read More</a>
+                                <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -134,10 +134,11 @@
                 <br>
                 </br>
                 <div class="text-center">
-                    <a href="#" class="btn btn-primary">Click for more articles</a>
+                    <a href="#" class="btn btn-primary btn-info text-light">Click for more articles</a>
                 </div>
             </div>
         </section>
+
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">

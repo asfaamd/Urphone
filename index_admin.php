@@ -16,7 +16,6 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
@@ -28,10 +27,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#find_gadget">Find Gadget</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="find_gadget.php">Find Gadget</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="articles.php">Articles</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="review.php">Reviews</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="wishlist.php">Wishlist</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Reviews</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Wishlist</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Logout</a></li>
                     </ul>
                 </div>
@@ -39,16 +38,18 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead bg-secondary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
+            <div class="container d-flex align-items-center flex-column" style = "background-image:gadget.jpeg">
                 
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Find your very own personalized gadget here!</h1>
+                <h1 class="masthead-heading mb-0">Find your very own personalized gadget here!</h1>
+                <br>
+                </br>
             
                 <!-- Masthead Subheading-->
                 <p class="masthead-subheading font-weight-light mb-0">You can find your gadget based on your need with best price here!</p>
                 </br>
                 </br>
-                <a button type="button" class="btn btn-primary btn-md" href="find_gadget.php"> Click Here!</button> </a>
+                <a href = "find_gadget.php" button type="button" class="btn btn-primary btn-md btn-info text-light"> Click Here!</button> </a> 
             </div>
         </header>
 
@@ -56,33 +57,84 @@
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Testimoni Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Testimonials</h2>
+                <h2 class="page-section-heading text-secondary mb-0">Testimonials</h2>
                 <!--<img src="/media/images/cat.jpg" class="img-fluid">-->
+                <br>
                 </br>
-                <div class="ms-auto"><p class="lead">Lorem ipsum, dolor sit amet consectetur 
+
+                <div class="ms-auto">
+                    <p class="lead">
+                        <h4 class="text-info">Samsung Z Flip</h4>
+                        Lorem ipsum, dolor sit amet consectetur 
                         adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
                         error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
-                        Cumque.</p></div>
-                
-            </div>
-        </section>
+                        Cumque.
+                    </p>
+                    <p class="text-muted">Ini nama user</p>
+                </div>
 
+                <br>
+                </br>
+
+                <div class="ms-auto">
+                    <p class="lead">
+                        <h4 class="text-info">Samsung Watch</h4>
+                        Lorem ipsum, dolor sit amet consectetur 
+                        adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
+                        error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
+                        Cumque.
+                    </p>
+                    <p class="text-muted">Sebut saja Fulan</p>
+                </div>
+
+                <div class="text-center">
+                    <a href="#" class="btn btn-primary btn-info text-light">Click for more review!</a>
+                </div>
+            </div>
         </section>
         <!-- About Section-->
         <section class="page-section bg-secondary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">Articles</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
+                <h2 class="page-section-heading text-white">Articles</h2>
+                <br>
+                </br>
                 <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! Cumque.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto neque aliquam voluptates, minus quam corrupti amet. Rem quaerat non qui eveniet ea repellat nulla. Quam aliquam quidem accusantium sequi tempora.</p></div>
+                <div class="card border-white text-white bg-secondary mb-3" style="w-100;">
+                    <div class="row g-0">
+                        <div class="col-md-4" style="max-width:100%">
+                            <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Ini Artikel</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Detik.com</small></p>
+                                <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-white text-white bg-secondary mb-3" style="w-100;">
+                    <div class="row g-0">
+                        <div class="col-md-4" style="max-width:100%">
+                            <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Ini Artikel</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Detik.com</small></p>
+                                <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                </br>
+                <div class="text-center">
+                    <a href="#" class="btn btn-primary btn-info text-light">Click for more articles</a>
                 </div>
             </div>
         </section>
@@ -93,7 +145,7 @@
                 <div class="row">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <h4 class="teuxt-uppercase mb-4">Location</h4>
                         <p class="lead mb-0">
                             Telkom University, Bandung
                         </p>
@@ -110,7 +162,7 @@
                     <div class="col-lg-4">
                         <h4 class="text-uppercase mb-4">About UrPhone</h4>
                         <p class="lead mb-0">
-                        Urphone will help you to find your desired gadgets!
+                            Urphone will help you to find your desired gadgets!
                     
                         </p>
                     </div>

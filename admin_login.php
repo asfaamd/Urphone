@@ -44,11 +44,6 @@
             <div class="container">
                 <!-- Contact Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Sign up</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-line"></div>
                 </div>
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
@@ -91,7 +86,9 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <a href="index_admin.php" button class="btn btn-primary btn-xl">Login</button> </a>
+                            <div class="text-center">
+                                <a href="index_admin.php" button class="btn btn-primary btn-xl btn-info text-light">Login</button> </a>
+                            </div>
                         </form>
                     </div>
                 </div>
