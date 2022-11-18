@@ -128,15 +128,117 @@
             </div>
         </div>
 
-        
+        <br>
+        </br>
+
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h1>Addition specifications</h1>
+                </div>
+                <p>P.s: This part is optional, but you can fill this part for better recommendation!</p>
+                <p>
+
+                </p>
+                <p>
+                    
+                </p>
+                <div class="col">
+                    <h6>RAM size (in GB)</h6>
+                </div>
+                <div class="col">
+                    <h6>Battery Size (in mAh)</h6>
+                </div>
+                <div class="col">
+                    <h6>Graphic Card</h6>
+                </div>
+            </div>
+        </div>
+
+        <form class="container">
+            <div class="row">
+                <div class="col-md">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </form>
 
         <br>
         </br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h6>Camera size (in Pixel)</h6>
+                </div>
+                <div class="col">
+                    <h6>External memory (in GB)</h6>
+                </div>
+                <div class="col">
+                    <h6>Operating system</h6>
+                </div>
+            </div>
+        </div>
+
+        <form class="container">
+            <div class="row">
+                <div class="col-md">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </form>
+
         <br>
         </br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h6>Internal memory (in GB)</h6>
+                </div>
+                <div class="col">
+                    <h6>Screen size (in inch)</h6>
+                </div>
+                <div class="col">
+                    <h6>Brand</h6>
+                </div>
+            </div>
+        </div>
+
+        <form class="container">
+            <div class="row">
+                <div class="col-md">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </form>
+
         <br>
         </br>
-    
+        <div class="container text-center">
+            <a button type="button" class="btn btn-primary btn-lg " href="find_gadget.php"> Search!</button> </a>
+        </div>
+
+        <br>
+        </br>
 
         <!-- Footer-->
         <footer class="footer text-center">

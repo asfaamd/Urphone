@@ -70,7 +70,6 @@
                     </p>
                     <p class="text-muted">Samsung Z Flip</p>
                 </div>
-                
             </div>
         </section>
         <!-- About Section-->
@@ -125,7 +124,7 @@
                 <div class="row">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <h4 class="teuxt-uppercase mb-4">Location</h4>
                         <p class="lead mb-0">
                             Telkom University, Bandung
                         </p>
