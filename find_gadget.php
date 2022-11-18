@@ -38,19 +38,31 @@
             </div>
         </nav>
 
-        <!-- Masthead-->
-    <header class="masthead bg-secondary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Lorem ipsum, dolor sit amet consectetur 
-                        adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
-                        error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
-                        Cumque.</p>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
 
-            </div>
-        </header>
-        
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
     
 
         <!-- Footer-->
