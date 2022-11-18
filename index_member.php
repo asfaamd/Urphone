@@ -28,7 +28,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="find_gadget.php">Find Gadget</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#find_gadget.php">Find Gadget</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="articles.php">Articles</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="review.php">Reviews</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="wishlist.php">Wishlist</a></li>
@@ -48,7 +48,7 @@
                 <p class="masthead-subheading font-weight-light mb-0">You can find your gadget based on your need with best price here!</p>
                 </br>
                 </br>
-                <button type="button" class="btn btn-primary btn-md"> Click Here!</button>  
+                <a button type="button" class="btn btn-primary btn-md" href="find_gadget.php"> Click Here!</button> </a>
             </div>
         </header>
 
