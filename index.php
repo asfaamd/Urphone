@@ -49,7 +49,7 @@
                 <p class="masthead-subheading font-weight-light mb-0">You can find your gadget based on your need with best price here!</p>
                 </br>
                 </br>
-                <a href = "find_gadget.php" button type="button" class="btn btn-primary btn-md"> Click Here!</button> </a> 
+                <a href = "find_gadget.php" button type="button" class="btn btn-primary btn-md btn-info text-light"> Click Here!</button> </a> 
             </div>
         </header>
 

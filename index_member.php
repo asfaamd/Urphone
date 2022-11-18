@@ -48,7 +48,7 @@
                 <p class="masthead-subheading font-weight-light mb-0">You can find your gadget based on your need with best price here!</p>
                 </br>
                 </br>
-                <a button type="button" class="btn btn-primary btn-md" href="find_gadget.php"> Click Here!</button> </a>
+                <a button type="button" class="btn btn-primary btn-md btn-info text-light" href="find_gadget.php"> Click Here!</button> </a>
             </div>
         </header>
 

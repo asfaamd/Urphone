@@ -44,12 +44,8 @@
             <div class="container">
                 <!-- Contact Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Login</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-line"></div>
-                </div>
+                <br>
+                </br>
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
@@ -89,18 +85,20 @@
                             <!-- This is what your users will see when there is-->
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <a href="index_member.php" button class="btn btn-primary btn-xl me-2">Login</button> </a>
-                            <!-- Signup Button-->
-                            </br>
-                            <br>
-                                Don't have account?
-                            </br>
-                            <a href="signup.php" button class="btn btn-primary btn-xl me-2">Signup</button> </a>
-                            <br>
-                                Are you admin?
-                            </br>
-                            <a href="admin_login.php" button class="btn btn-primary btn-xl">Login as admin</button> </a>
+                            <!-- Submit and sign up Button-->
+                            <div class="row">
+                                <div class="col">
+                                    <br></br>
+                                    <a href="index_member.php" button class="btn btn-primary btn-info text-white btn-xl">Login</button> </a>
+                                </div>
+                                <div class="col">
+                                    <br>Don't have account?</br>
+                                    <a href="signup.php" button class="btn btn-primary btn-light text-info border-info btn-xl">Signup</button> </a>
+                                </div>
+                                <div class="col">
+                                    <br>Are you admin?</br>
+                                    <a href="admin_login.php" button class="btn btn-primary btn-light text-info border-info btn-xl">Login as admin</button> </a>
+                                </div>
                             </form>
                     </div>
                 </div>

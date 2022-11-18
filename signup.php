@@ -91,7 +91,9 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <a href="index_member.php" button class="btn btn-primary btn-xl">Sign up</button> </a>
+                            <div class="text-center">
+                            <a href="index_member.php" button class="btn btn-primary btn-xl btn-info text-light">Sign up</button> </a>
+                            </div>
                         </form>
                     </div>
                 </div>
