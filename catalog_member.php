@@ -305,12 +305,12 @@
             </div>
             </br>
             <div class="row">
-                <div class="col">
+                <div class="col me-auto">
                     <a href="login.php" button class="btn btn-primary btn-info text-white btn-lg text-center">Send</button> </a>
                 </div>
-                <div class="col">
+                <div class="col ms-auto">
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-info dropdown-toggle text-white btn-lg" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Give rating
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
