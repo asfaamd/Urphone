@@ -262,7 +262,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-4">
-                            <h6 class="text-info">J'ametie the dancing girl</h6>
+                            <h6 class="text-info">Ahmad Samarinda</h6>
                         </div>
                         <div class="col-lg-4">
                             <p class="text-muted">11/11/2022</p>
@@ -279,7 +279,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-4">
-                            <h6 class="text-info">J'ametie the dancing girl</h6>
+                            <h6 class="text-info">Ahmad Samarinda</h6>
                         </div>
                         <div class="col-lg-4">
                             <p class="text-muted">11/11/2022</p>
@@ -291,7 +291,7 @@
             </div>
             </br>
             <div class="button text-center">
-                <a href="login.php" button class="btn btn-primary btn-info text-white btn-lg text-center">Click for more comments</button> </a>
+                <a href="member_review.php" button class="btn btn-primary btn-info text-white btn-lg text-center">Click for more comments</button> </a>
             </div>
         </div>
 
@@ -304,25 +304,25 @@
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             </br>
+            <div class="container">
             <div class="row">
-                <div class="col me-auto">
-                    <a href="login.php" button class="btn btn-primary btn-info text-white btn-lg text-center">Send</button> </a>
+            <div class="dropdown col-lg-4 me-auto">
+                <a href="#" button class="btn btn-primary btn-info text-white btn-lg text-center">Send</button> </a>
                 </div>
-                <div class="col ms-auto">
-                    <div class="dropdown">
-                        <button class="btn btn-info dropdown-toggle text-white btn-lg" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Give rating
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <button class="dropdown-item" type="button">1</button>
-                            <button class="dropdown-item" type="button">2</button>
-                            <button class="dropdown-item" type="button">3</button>
-                            <button class="dropdown-item" type="button">4</button>
-                            <button class="dropdown-item" type="button">5</button>
-                        </div>
-                    </div>
+                <div class="dropdown col-lg-4 ms-auto">
+                    <button class="btn btn-info text-light btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Rating
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">1</a></li>
+                        <li><a class="dropdown-item" href="#">2</a></li>
+                        <li><a class="dropdown-item" href="#">3</a></li>
+                        <li><a class="dropdown-item" href="#">4</a></li>
+                        <li><a class="dropdown-item" href="#">5</a></li>
+                    </ul>
                 </div>
             </div>
+        </div>
         </div>
 
         <br></br>
