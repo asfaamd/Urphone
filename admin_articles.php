@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
+                <a class="navbar-brand" href="index_admin.php"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -54,7 +54,7 @@
                             <h5 class="card-title">Ini Artikel</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <p class="card-text text-muted">Detik.com</p>
-                            <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
+                            <a href="admin_article_page.php" class="btn btn-primary btn-info text-light">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                             <h5 class="card-title">Ini Artikel</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <p class="card-text text-muted">Detik.com</p>
-                            <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
+                            <a href="admin_article_page.php" class="btn btn-primary btn-info text-light">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                             <h5 class="card-title">Ini Artikel</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <p class="card-text text-muted">Detik.com</p>
-                            <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
+                            <a href="admin_article_page.php" class="btn btn-primary btn-info text-light">Read More</a>
                         </div>
                     </div>
                 </div>

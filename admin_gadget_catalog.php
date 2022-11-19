@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
+                <a class="navbar-brand" href="index_admin.php"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -36,7 +36,57 @@
                 </div>
             </div>
         </nav>
+
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+
+        <!--Title-->
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h1>Gadget catalogs</h1>
+                </div>
+            </div>
+            <br>
+            <!--Recommendation lists-->
+            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                <div class="row g-0">
+                    <div class="col-md-4" style="max-width:210px">
+                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple Watch Series 6</h5>
+                            <p><h7 class="card-text">Rp2.000.000</h7>
+                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
+                            <p><a href="admin_catalog_page.php" class="btn btn- btn-info text-light">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                <div class="row g-0">
+                    <div class="col-md-4" style="max-width:210px">
+                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple Watch Series 6</h5>
+                            <p><h7 class="card-text">Rp2.000.000</h7>
+                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
+                            <p><a href="admin_catalog_page.php" class="btn btn- btn-info text-light">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         
+        <br>
+        </br>
         
 
         <!-- Footer-->

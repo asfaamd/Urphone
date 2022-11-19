@@ -85,17 +85,6 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="row text-center">
-                <div class="col">
-                    <a href="member_find_gadget.php" button class="btn btn-primary btn-info text-white btn-xl">Go back</button> </a>
-                </div>
-                <div class="col">
-                        <a href="#" button class="btn btn-primary btn-info text-white btn-xl">Click for more</button> </a>
-                </div>            
-            </div>
-        </div>
-
         
         <br>
         </br>
