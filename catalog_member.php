@@ -303,12 +303,27 @@
             <div class="form-group">
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-            <div class="text-right">
-                </br>
-                <a href="login.php" button class="btn btn-primary btn-info text-white btn-lg text-center">Send</button> </a>
+            </br>
+            <div class="row">
+                <div class="col">
+                    <a href="login.php" button class="btn btn-primary btn-info text-white btn-lg text-center">Send</button> </a>
+                </div>
+                <div class="col">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Give rating
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="button">1</button>
+                            <button class="dropdown-item" type="button">2</button>
+                            <button class="dropdown-item" type="button">3</button>
+                            <button class="dropdown-item" type="button">4</button>
+                            <button class="dropdown-item" type="button">5</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
 
         <br></br>
         <br></br>
