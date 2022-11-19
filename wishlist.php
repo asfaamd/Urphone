@@ -21,23 +21,86 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="index.php"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
+                <a class="navbar-brand" href="index_member.php"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="find_gadget.php">Find Gadget</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="articles.php">Articles</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="review.php">Reviews</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="member_find_gadget.php">Find Gadget</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="articles_member.php">Articles</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="member_review.php">Reviews</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="wishlist.php" style="color:Orange">Wishlist</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-</br>
+
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+
+        <!--Title-->
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h1>Your wishlists</h1>
+                </div>
+            </div>
+            <br>
+            <!--Recommendation lists-->
+            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                <div class="row g-0">
+                    <div class="col-md-4" style="max-width:210px">
+                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple Watch Series 6</h5>
+                            <p><h7 class="card-text">Rp2.000.000</h7>
+                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
+                            <p><a href="catalog_member.php" class="btn btn- btn-info text-light">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                <div class="row g-0">
+                    <div class="col-md-4" style="max-width:210px">
+                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple Watch Series 6</h5>
+                            <p><h7 class="card-text">Rp2.000.000</h7>
+                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
+                            <p><a href="catalog_member.php" class="btn btn- btn-info text-light">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <a href="member_find_gadget.php" button class="btn btn-primary btn-info text-white btn-xl">Go back</button> </a>
+                </div>
+                <div class="col">
+                        <a href="#" button class="btn btn-primary btn-info text-white btn-xl">Click for more</button> </a>
+                </div>            
+            </div>
+        </div>
+
+        
+        <br>
+        </br>
+
+
         
         <!-- Footer-->
         <footer class="footer text-center">

@@ -39,11 +39,13 @@
         </nav>
 
         <br></br>
+        <br></br>
+        <br></br>
         <!--Title-->
         <div class="container">
             <div class="row">
                 <div class="text-center">
-                    <h1>Recommended for you</h1>
+                    <h1>User review</h1>
                 </div>
             </div>
             <br>

@@ -206,9 +206,7 @@
                     <div class="card bg-secondary text-light" style="width: 254px;">
                         <img src="jam.jpg" class="card-img-top" style="width:250px">
                         <div class="card-body">
-                            <h5 class="card-text">Apple watch Series 6 Blue series</h5>
-                            <p>Rp2.000.000</p>
-                            <p>www.dinomarket.com</p>
+                            <h5 class="card-text">www.dinomarket.com</h5>
                         </div>
                     </div>
                 </div>
@@ -216,9 +214,7 @@
                     <div class="card bg-secondary text-light" style="width: 254px;">
                         <img src="jam.jpg" class="card-img-top" style="width:250px">
                         <div class="card-body">
-                            <h5 class="card-text">Apple watch Series 6 Blue series</h5>
-                            <p>Rp2.000.000</p>
-                            <p>www.dinomarket.com</p>
+                            <h5 class="card-text">www.dinomarket.com</h5>
                         </div>
                     </div>
                 </div>
@@ -226,9 +222,7 @@
                     <div class="card bg-secondary text-light" style="width: 254px;">
                         <img src="jam.jpg" class="card-img-top" style="width:250px">
                         <div class="card-body">
-                            <h5 class="card-text">Apple watch Series 6 Blue series</h5>
-                            <p>Rp2.000.000</p>
-                            <p>www.dinomarket.com</p>
+                            <h5 class="card-text">www.dinomarket.com</h5>
                         </div>
                     </div>
                 </div>

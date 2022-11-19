@@ -28,6 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_input_article.php">Article Input</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_articles.php">Article</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_input_gadget.php" style="color:Orange">Catalog Input</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_gadget_catalog.php">Gadget Catalog</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Logout</a></li>
@@ -35,8 +36,193 @@
                 </div>
             </div>
         </nav>
+
+        <br></br>
+        <br></br>
+        <br></br>
         
-        
+        <!--form untuk input gadget-->
+        <div class="container">
+            <h1 class="text-secondary">Insert gadget catalog</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product title</label>
+                        <input class="form-control" type="text" placeholder="Insert product title">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product price</label>
+                        <input class="form-control" type="text" placeholder="Insert product price">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product network</label>
+                        <input class="form-control" type="text" placeholder="Insert product network">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product launch</label>
+                        <input class="form-control" type="text" placeholder="Insert product launch">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product body</label>
+                        <input class="form-control" type="text" placeholder="Insert product body">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product display</label>
+                        <input class="form-control" type="text" placeholder="Insert product display">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product body</label>
+                        <input class="form-control" type="text" placeholder="Insert product body">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product display</label>
+                        <input class="form-control" type="text" placeholder="Insert product display">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product platform</label>
+                        <input class="form-control" type="text" placeholder="Insert product platform">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product memory</label>
+                        <input class="form-control" type="text" placeholder="Insert product memory">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product camera</label>
+                        <input class="form-control" type="text" placeholder="Insert product camera">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product sound</label>
+                        <input class="form-control" type="text" placeholder="Insert product sound">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product comms</label>
+                        <input class="form-control" type="text" placeholder="Insert product comms">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product feature</label>
+                        <input class="form-control" type="text" placeholder="Insert product feature">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product battery</label>
+                        <input class="form-control" type="text" placeholder="Insert product battery">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product misc</label>
+                        <input class="form-control" type="text" placeholder="Insert product misc">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product RAM</label>
+                        <input class="form-control" type="text" placeholder="Insert product RAM">
+                    </div>
+                </div>
+                <div class="col">
+                <div class="form-group">
+                        <label>Product external memory</label>
+                        <input class="form-control" type="text" placeholder="Insert product external memory">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Product kinds</label> <!--Jenis gadgetnya apa gitu-->
+                        <input class="form-control" type="text" placeholder="Insert product kinds"> 
+                    </div>
+                </div>
+                <div class="col">
+                <div class="form-group">
+                        <label>User occupation</label> <!--untuk kasih rekomen sesuai kerjaan user-->
+                        <input class="form-control" type="text" placeholder="Insert user occupation">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Gadget usage</label> <!--gadgetnya dipake buat apa-->
+                        <input class="form-control" type="text" placeholder="Insert gadget usage"> 
+                    </div>
+                </div>
+                <div class="col">
+                <div class="form-group">
+                        <label>Buying links</label> <!--untuk kasih rekomen sesuai kerjaan user-->
+                        <input class="form-control" type="text" placeholder="Insert product buying links">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Input article picture</label><p></p>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+            </form>
+            <br></br>
+            <div class="text-center">
+                <a href="#.php" button class="btn btn-primary btn-lg btn-info text-light">Save changes</button> </a>
+            </div>
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
 
         <!-- Footer-->
         <footer class="footer text-center">

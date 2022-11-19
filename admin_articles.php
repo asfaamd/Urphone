@@ -16,30 +16,28 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="index_member.php"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
+                <a class="navbar-brand" href="#page-top"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="member_find_gadget.php">Find Gadget</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="articles_member.php" style="color:Orange">Articles</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="member_review.php">Reviews</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="wishlist.php">Wishlist</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_input_article.php">Article Input</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_articles.php">Article</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_input_gadget.php">Catalog Input</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_gadget_catalog.php" style="color:Orange">Gadget Catalog</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <br>
-        </br>
+       </br>
         <br>
         </br>
         <br>
@@ -71,7 +69,7 @@
                             <h5 class="card-title">Ini Artikel</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <p class="card-text text-muted">Detik.com</p>
-                            <a href="member_article_page.php" class="btn btn-primary btn-info text-light">Read More</a>
+                            <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -86,14 +84,12 @@
                             <h5 class="card-title">Ini Artikel</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <p class="card-text text-muted">Detik.com</p>
-                            <a href="member_article_page.php" class="btn btn-primary btn-info text-light">Read More</a>
+                            <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-    
 
         <!-- Footer-->
         <footer class="footer text-center">
@@ -101,7 +97,7 @@
                 <div class="row">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <h4 class="teuxt-uppercase mb-4">Location</h4>
                         <p class="lead mb-0">
                             Telkom University, Bandung
                         </p>
@@ -118,7 +114,7 @@
                     <div class="col-lg-4">
                         <h4 class="text-uppercase mb-4">About UrPhone</h4>
                         <p class="lead mb-0">
-                            Urphone is good
+                            Urphone will help you to find your desired gadgets!
                     
                         </p>
                     </div>
@@ -137,3 +133,5 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
+
+        

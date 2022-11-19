@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
+                <a class="navbar-brand" href="index_admin.php"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -28,6 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_input_article.php" style="color:Orange">Article Input</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_articles.php">Article</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_input_gadget.php">Catalog Input</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin_gadget_catalog.php">Gadget Catalog</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Logout</a></li>
@@ -36,6 +37,46 @@
             </div>
         </nav>
         
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <div class="container">
+            <h1 class="text-secondary">Insert article</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Article title</label>
+                        <input class="form-control" type="text" placeholder="Insert article input">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Article source</label>
+                        <input class="form-control" type="text" placeholder="Insert article source">
+                    </div>
+                </div>
+                <p></p>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Insert article" rows="3"></textarea>
+                </div>
+                <p></p>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Input article picture</label><p></p>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                </form>
+            </div>
+            <div class="text-center">
+                <a href="#.php" button class="btn btn-primary btn-lg btn-info text-light">Save changes</button> </a>
+            </div>
+        </div>
+
+        <br></br>
+        <br></br>
+        <br></br>
         
 
         <!-- Footer-->

@@ -21,80 +21,60 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="index_member.php"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
+                <a class="navbar-brand" href="index.php"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="member_find_gadget.php">Find Gadget</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="articles_member.php" style="color:Orange">Articles</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="member_review.php">Reviews</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="wishlist.php">Wishlist</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Logout</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="find_gadget.php">Find Gadget</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="articles.php">Articles</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Reviews</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Wishlist</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-        <br>
-        </br>
-        <br>
-        </br>
-        <br>
-        </br>
         
+        <br></br>
+        <br></br>
+        <br></br>
         <div class="container">
-            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:100%">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Ini Artikel</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text text-muted">Detik.com</p>
-                            <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center">
+                <h1>Ini Artikel</h1>
             </div>
-            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:100%">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Ini Artikel</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text text-muted">Detik.com</p>
-                            <a href="member_article_page.php" class="btn btn-primary btn-info text-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
+            <p></p>
+            <div class="text-center">
+                <img src="gadget.jpeg" class="img-fluid" alt="Responsive image" style="height:300px">
             </div>
-            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:100%">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Ini Artikel</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text text-muted">Detik.com</p>
-                            <a href="member_article_page.php" class="btn btn-primary btn-info text-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                labore et dolore magna aliqua. Porttitor lacus luctus accumsan tortor posuere ac. Fames ac 
+                turpis egestas integer eget aliquet. Nunc scelerisque viverra mauris in aliquam sem. Arcu 
+                dictum varius duis at consectetur lorem. Sagittis aliquam malesuada bibendum arcu vitae 
+                elementum curabitur. Pulvinar sapien et ligula ullamcorper malesuada proin libero. Id donec 
+                ultrices tincidunt arcu non sodales neque sodales. Mauris commodo quis imperdiet massa. 
+                Convallis aenean et tortor at. Pulvinar elementum integer enim neque volutpat ac. In ornare 
+                quam viverra orci sagittis. Phasellus vestibulum lorem sed risus ultricies tristique nulla 
+                aliquet enim. Consequat mauris nunc congue nisi vitae suscipit tellus. Elit duis tristique 
+                sollicitudin nibh sit amet commodo nulla. Elit ullamcorper dignissim cras tincidunt lobortis.
+                Turpis tincidunt id aliquet risus feugiat in ante. Dignissim enim sit amet venenatis urna 
+                cursus eget nunc scelerisque. Volutpat consequat mauris nunc congue nisi vitae suscipit 
+                tellus mauris. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. 
+                Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Enim ut sem viverra 
+                aliquet eget sit amet. Dolor sit amet consectetur adipiscing. Augue ut lectus arcu bibendum 
+                at varius vel pharetra. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. 
+                Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Est ante in nibh 
+                mauris cursus. Consectetur lorem donec massa sapien faucibus et molestie ac. Lacus vel facilisis 
+                volutpat est. Elit ullamcorper dignissim cras tincidunt lobortis. Tempor commodo ullamcorper a 
+                lacus vestibulum sed arcu.</p>
         </div>
+        <br></br>
+        <br></br>
+       
         
-    
-
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
