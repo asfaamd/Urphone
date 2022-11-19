@@ -21,7 +21,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
+                <a class="navbar-brand" href="index.php"><span style="color: Orange">Ur</span><span style="color: SlateBlue">Phone</span></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -63,11 +63,11 @@
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
-                            <!-- Phone number input-->
+                            <!-- Password input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" data-sb-validations="required" />
+                                <label for="password">Password</label>
+                                <div class="invalid-feedback" data-sb-feedback="password:required">A password is required.</div>
                             </div>
                             
                             <!-- Submit success message-->
