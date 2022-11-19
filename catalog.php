@@ -16,7 +16,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-
+    
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
@@ -37,11 +37,38 @@
                 </div>
             </div>
         </nav>
+        <br></br>
+        <br></br>
         </br>
         <div class="container">
-            Recommendation / <span class="text-info">Apple Watch Series 6</span>
+            <a class="nav-link text-secondary" href="recommendation.php">Recommendation /<span class="text-info"> Apple Watch Series 6</span></a>
         </div>
-        
+        </br>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img class="" src="jam.jpg" width="250px">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center">Apple Watch Series 6</h3>
+                    </br>
+                    <div class="card border-secondary">
+                        <div class="card-body">
+                            <p>Harga saat rilis</p>
+                            <h2>Rp5.000.000</h2>
+                            </br>
+                            <a href="#.php" button class="btn btn-primary btn-info text-white btn-lg">Add to wishlist</button> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br></br>
+        <div class="container">
+            lalala
+        </div>
+
+
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
