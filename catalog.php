@@ -30,9 +30,9 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="find_gadget.php">Find Gadget</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="articles.php">Articles</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="review.php">Reviews</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="wishlist.php" style="color:Orange">Wishlist</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Logout</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Reviews</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Wishlist</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,28 +47,212 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-6">
-                    <img class="" src="jam.jpg" width="250px">
+                    <img src="jam.jpg" width="250px">
                 </div>
                 <div class="col-md-6">
-                    <h3 class="text-center">Apple Watch Series 6</h3>
+                    <h2 class="text-center text-secondary">Apple Watch Series 6</h2>
                     </br>
-                    <div class="card border-secondary">
+                    <div class="card border-secondary bg-secondary text-white" style="max-width: 500px;">
                         <div class="card-body">
-                            <p>Harga saat rilis</p>
-                            <h2>Rp5.000.000</h2>
                             </br>
-                            <a href="#.php" button class="btn btn-primary btn-info text-white btn-lg">Add to wishlist</button> </a>
+                            <h4>Like this product?</h4>
+                            </br>
+                            <a href="#" button class="btn btn-primary btn-info text-white btn-lg">Add to wishlist</button> </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <br></br>
+
+        <!--product-->
         <div class="container">
-            lalala
+            <div class="card border-secondary bg-secondary">
+                <div class="card-body">
+                    <h2 class="text-white">Spesifications</h2>
+                    </br>
+                    <!--product network-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Network
+                        </div>
+                        <div class="col text-white">
+                            GSM/HSPA/LTE
+                        </div>
+                    </div>
+                    </br>
+                    <!--product launch-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Launch
+                        </div>
+                        <div class="col text-white">
+                            18 September 2020
+                        </div>
+                    </div>
+                    </br>
+                    <!--product body-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Body
+                        </div>
+                        <div class="col text-white">
+                            Glass front, titanium case (44 x 38 x 10.4 mm)
+                        </div>
+                    </div>
+                    </br>
+                    <!--Display-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Display
+                        </div>
+                        <div class="col text-white">
+                            Retina LTPO OLED, 1000 nites (1,78 inches)
+                        </div>
+                    </div>
+                    </br>
+                    <!--Platform-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Platform
+                        </div>
+                        <div class="col text-white">
+                            watchOS 7.0
+                        </div>
+                    </div>
+                    </br>
+                    <!--Memory-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Memory
+                        </div>
+                        <div class="col text-white">
+                            32 GB, 1 GB RAM
+                        </div>
+                    </div>
+                    </br>
+                    <!--Camera-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Camera
+                        </div>
+                        <div class="col text-white">
+                           None
+                        </div>
+                    </div>
+                    </br>
+                    <!--SOund-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Sound
+                        </div>
+                        <div class="col text-white">
+                            Loudspeaker
+                        </div>
+                    </div>
+                    </br>
+                    <!--Comms-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Comms
+                        </div>
+                        <div class="col text-white">
+                            Wi-fi 802.11 b/g/h, dual-band WLAN
+                        </div>
+                    </div>
+                    </br>
+                    <!--Features-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Features
+                        </div>
+                        <div class="col text-white">
+                            Accelerometer, gyro, heart rate, barometer, compass, natural language command
+                        </div>
+                    </div>
+                    </br>
+                    <!--Battery-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Battery
+                        </div>
+                        <div class="col text-white">
+                            Wireless charging Li-ion 303.8 mAh (1.17 Wh), non-removable
+                        </div>
+                    </div>
+                    </br>
+                    <!--Misc-->
+                    <div class="row">
+                        <div class="col text-info">
+                            Misc
+                        </div>
+                        <div class="col text-white">
+                            Color Titanium, space black
+                            Model A229, 12294, A2375 
+                        </div>
+                    </div>
+                    </br>
+                </div>   
+            </div>
+        </div>
+
+        <br></br>
+        <!--where to buy?-->
+        <div class="container">
+            <h2 class=text-secondary>Where to buy?</h2>
+            </br>
+            <div class="row">
+                <div class="col">
+                    <div class="card bg-secondary text-light" style="width: 254px;">
+                        <img src="jam.jpg" class="card-img-top" style="width:250px">
+                        <div class="card-body">
+                            <h5 class="card-text">Apple watch Series 6 Blue series</h5>
+                            <p>Rp2.000.000</p>
+                            <p>www.dinomarket.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-secondary text-light" style="width: 254px;">
+                        <img src="jam.jpg" class="card-img-top" style="width:250px">
+                        <div class="card-body">
+                            <h5 class="card-text">Apple watch Series 6 Blue series</h5>
+                            <p>Rp2.000.000</p>
+                            <p>www.dinomarket.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-secondary text-light" style="width: 254px;">
+                        <img src="jam.jpg" class="card-img-top" style="width:250px">
+                        <div class="card-body">
+                            <h5 class="card-text">Apple watch Series 6 Blue series</h5>
+                            <p>Rp2.000.000</p>
+                            <p>www.dinomarket.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br></br>
+        
+        <!--User reviews-->
+        <div class="container">
+            <h2 class="text-secondary">User reviews</h2>
+            </br>
+            <h2 class="text-secondary">Please login to see what user say about this product!</h2>
+            </br>
+            <div class="button text-center">
+                <a href="login.php" button class="btn btn-primary btn-info text-white btn-lg text-center">Login!</button> </a>
+            </div>
         </div>
 
 
+
+        <br></br>
+        <br></br>
+        <br></br>
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
