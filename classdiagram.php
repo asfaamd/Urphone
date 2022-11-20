@@ -109,13 +109,13 @@ class ProductCatalog {
 			$ProductBattery, $ProductMisc, $WhereToBuy;
 
 	public function __construct($pict, $title, $brand, $price, $network, $launch, $body, $display, $gpu, $os, $platform, $ram, $intmemory, $extmemory, $camera,	$sound, $comms, $feature, $battery,	$misc, $wtbuy) {
-		$this->ProductPicture = $pict;				$this->ProductTitle = $title;				$this->ProductBrand = $brand;
-		$this->ProductPrice = $price;				$this->ProductNetwork = $network;			$this->ProductLaunch = $launch;
-		$this->ProductBody = $body;					$this->ProductDisplay = $display;			$this->ProductGPU = $gpu;
-		$this->ProductOS = $os;						$this->ProductPlatform = $platform;			$this->ProductRAM = $ram;
+		$this->ProductPicture = $pict;			$this->ProductTitle = $title;			$this->ProductBrand = $brand;
+		$this->ProductPrice = $price;			$this->ProductNetwork = $network;		$this->ProductLaunch = $launch;
+		$this->ProductBody = $body;			$this->ProductDisplay = $display;		$this->ProductGPU = $gpu;
+		$this->ProductOS = $os;				$this->ProductPlatform = $platform;		$this->ProductRAM = $ram;
 		$this->ProductInternalMemory = $intmemory;	$this->ProductExternalMemory = $extmemory;	$this->ProductCamera = $camera;
-		$this->ProductSound = $sound;				$this->ProductComms = $comms;				$this->ProductFeature = $feature;
-		$this->ProductBattery = $battery; 			$this->ProductMisc = $misc;					$this->WhereToBuy = $wtbuy;		
+		$this->ProductSound = $sound;			$this->ProductComms = $comms;			$this->ProductFeature = $feature;
+		$this->ProductBattery = $battery; 		$this->ProductMisc = $misc;			$this->WhereToBuy = $wtbuy;		
 	}
 
 	public function InputCatalog() {}
