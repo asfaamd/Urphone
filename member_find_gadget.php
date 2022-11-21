@@ -191,8 +191,14 @@
                 <div class="col-md">
                     <input type="text" class="form-control">
                 </div>
-                <div class="col-md">
-                    <input type="text" class="form-control">
+                <div class="dropdown col-lg-4 ms-auto">
+                    <button class="btn btn-secondary btn-md dropdown-toggle bg-light text-secondary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        External memory
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Yes</a></li>
+                        <li><a class="dropdown-item" href="#">No</a></li>
+                    </ul>
                 </div>
                 <div class="col-md">
                     <input type="text" class="form-control">
