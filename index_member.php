@@ -57,7 +57,7 @@
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Testimoni Section Heading-->
-                <h2 class="page-section-heading text-secondary mb-0">Testimonials</h2>
+                <h2 class="page-section-heading text-secondary mb-0">Reviews</h2>
                 <!--<img src="/media/images/cat.jpg" class="img-fluid">-->
                 <br>
                 </br>
