@@ -49,47 +49,34 @@
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form action="be_ceklogin.php" method="post" id="contactForm">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" type="text" name="username" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Full name</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- Password input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" data-sb-validations="required" />
+                                <input class="form-control" id="exampleInputPassword1" type="password" name="password" placeholder="Password" data-sb-validations="required" />
                                 <label for="password">Password</label>
                                 <div class="invalid-feedback" data-sb-feedback="password:required">A password is required.</div>
                             </div>
 
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    
-                                    <br />
-                                    </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+        
                             <!-- Submit and sign up Button-->
                             <div class="row">
                                 <div class="col">
                                     <br></br>
-                                    <a href="index_member.php" button class="btn btn-primary btn-info text-white btn-xl">Login</button> </a>
+                                    <!--<a href="index_member.php" button class="btn btn-primary btn-info text-white btn-xl" name="btnLogin">Login</button> </a>-->
+                                    <a button class="btn btn-primary btn-info text-white btn-xl" name="btnLogin">Login</button> </a>
                                 </div>
                                 <div class="col">
                                     <br>Don't have account?</br>

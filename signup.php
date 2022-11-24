@@ -1,3 +1,7 @@
+<?php
+   require_once("be_config_register.php"); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -37,9 +41,30 @@
                 </div>
             </div>
         </nav>
-</br>
         
-        <!-- Contact Section-->
+</br>
+        <!-- PHP Section-->
+        <div>
+            <?php
+                if(isset($_POST['create'])){
+                    $username= $_POST['username'];
+                    $email= $_POST['email'];
+                    $password= $_POST['password'];
+
+                    $sql = "INSERT INTO member (MemberEmail, MemberPassword, MemberName) VALUES(?,?,?)";
+                    $stmtinsert = $db->prepare($sql);
+                    $result = $stmtinsert->execute([$email, $password, $username]);
+                    if($result){
+                        echo "Successfully saved";
+                    } else{
+                        echo "There were error while saving data";
+                    }
+                    }
+            ?>
+        </div>
+
+
+        <!-- Signup Section-->
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
@@ -52,20 +77,21 @@
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <input class="form-control" type="text" name="username" placeholder="Enter your name..." required />
+                                <label for="username">Full name</label>
                             </div>
+
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" type="email" name="email" placeholder="name@example.com" required />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
+
                             <!-- Password input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" data-sb-validations="required" />
+                                <input class="form-control" type="password" name="password" placeholder="Password" required />
                                 <label for="password">Password</label>
                                 <div class="invalid-feedback" data-sb-feedback="password:required">A password is required.</div>
                             </div>
@@ -88,7 +114,8 @@
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
                             <div class="text-center">
-                            <a href="index_member.php" button class="btn btn-primary btn-xl btn-info text-light">Sign up</button> </a>
+                                <input class="btn btn-primary btn-xl btn-info text-light" input type="submit"  name="create" value="Sign up">
+                            <!--<a href="index_member.php" button class="btn btn-primary btn-xl btn-info text-light">Sign up</button> </a>-->
                             </div>
                         </form>
                     </div>
