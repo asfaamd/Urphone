@@ -1,10 +1,18 @@
 <?php
 
-    $db_user="root";
-    $db_pass="";
-    $db_name="urphone";
+    $host = "localhost";
+    $username = "root";
+    $password = "";
+    $db = "urphone";
 
-    $db = new PDO("mysql:host=localhost;dbname=" . $db_name . ";charset=utf8", $db_user, $db_pass);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $connection = mysqli_connect($host, $username, $password, $db);
 
+    $user_name = "budi";
+    $email_addr = "budi@gmail.com";
+    $passw = "budi123";
+
+    $query = "insert into member (MemberEmail, MemberPassword, MemberName) values ('$email_addr', '$passw', '$user_name')";
+
+    mysqli_query($connection, $query);
+    echo "sudah dimasukin lho";
 ?>
