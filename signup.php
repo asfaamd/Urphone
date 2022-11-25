@@ -1,3 +1,25 @@
+<?php
+    include("be_connect.php");
+    include("be_signup.php");
+    $username = "";
+    $email = "";
+    $password = "";
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $signup = new Signup();
+        $result = $signup->evaluate($_POST);
+        if($result != "empty"){
+            echo $result;
+            header("Location: index_member.php", true, 301);
+            exit();
+        } else{
+        }
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -39,7 +61,6 @@
         </nav>
         
 </br>
-        <!-- PHP Section-->
 
         <!-- Signup Section-->
         <section class="page-section" id="contact">
@@ -51,47 +72,28 @@
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form method="post" action="" id="contactForm" >
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="text" name="username" placeholder="Enter your name..." required />
+                                <input  value ="<?php echo $username?>" class="form-control" type="text" name="username" placeholder="Enter your name..." required />
                                 <label for="username">Full name</label>
                             </div>
 
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="email" name="email" placeholder="name@example.com" required />
+                                <input value ="<?php echo $email?>" class="form-control" type="email" name="email" placeholder="name@example.com" required />
                                 <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
 
                             <!-- Password input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="password" name="password" placeholder="Password" required />
+                                <input value ="<?php echo $password?>" class="form-control" type="password" name="password" placeholder="Password" required />
                                 <label for="password">Password</label>
-                                <div class="invalid-feedback" data-sb-feedback="password:required">A password is required.</div>
                             </div>
                             
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    
-                                    <br />
-                                    </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
                             <div class="text-center">
-                                <input class="btn btn-primary btn-xl btn-info text-light" input type="submit"  name="create" value="Sign up">
+                                <input class="btn btn-primary btn-xl btn-info text-light" type="submit" id="button" value="Sign up">
                             <!--<a href="index_member.php" button class="btn btn-primary btn-xl btn-info text-light">Sign up</button> </a>-->
                             </div>
                         </form>
