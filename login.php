@@ -49,7 +49,7 @@
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
-                        <form action="be_ceklogin.php" method="post" id="contactForm">
+                        <form action="#.php" method="post" id="contactForm">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" name="username" placeholder="Enter your name..." data-sb-validations="required" />

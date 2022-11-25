@@ -1,7 +1,3 @@
-<?php
-   require_once("be_config_register.php"); 
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -44,25 +40,6 @@
         
 </br>
         <!-- PHP Section-->
-        <div>
-            <?php
-                if(isset($_POST['create'])){
-                    $username= $_POST['username'];
-                    $email= $_POST['email'];
-                    $password= $_POST['password'];
-
-                    $sql = "INSERT INTO member (MemberEmail, MemberPassword, MemberName) VALUES(?,?,?)";
-                    $stmtinsert = $db->prepare($sql);
-                    $result = $stmtinsert->execute([$email, $password, $username]);
-                    if($result){
-                        echo "Successfully saved";
-                    } else{
-                        echo "There were error while saving data";
-                    }
-                    }
-            ?>
-        </div>
-
 
         <!-- Signup Section-->
         <section class="page-section" id="contact">

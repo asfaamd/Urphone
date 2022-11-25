@@ -5,14 +5,18 @@
     $password = "";
     $db = "urphone";
 
-    $connection = mysqli_connect($host, $username, $password, $db);
+    $conn = new mysqli($host, $username, $password, $db);
+    if($conn->connect_error){
+        die("Connection failed: " . $conn->connect_error);
+    } else{
+        echo "connected successfully";
+    }
 
-    $user_name = "budi";
-    $email_addr = "budi@gmail.com";
-    $passw = "budi123";
+    $user_name = "markicob";
+    $email_addr = "markicob@gmail.com";
+    $passw = "markicob";
 
     $query = "insert into member (MemberEmail, MemberPassword, MemberName) values ('$email_addr', '$passw', '$user_name')";
 
-    mysqli_query($connection, $query);
-    echo "sudah dimasukin lho";
+    mysqli_query($conn, $query);
 ?>
