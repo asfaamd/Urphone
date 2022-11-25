@@ -1,5 +1,5 @@
 <?php
-
+    
     $host = "localhost";
     $username = "root";
     $password = "";
@@ -12,11 +12,10 @@
         echo "connected successfully";
     }
 
-    $user_name = "markicob";
-    $email_addr = "markicob@gmail.com";
-    $passw = "markicob";
+    $user_name = "udin";
+    $email_addr = "udin@gmail.com";
+    $passw = "udin";
 
     $query = "insert into member (MemberEmail, MemberPassword, MemberName) values ('$email_addr', '$passw', '$user_name')";
-
-    mysqli_query($conn, $query);
+    $conn->query($query);
 ?>
