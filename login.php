@@ -37,7 +37,8 @@
                 </div>
             </div>
         </nav>
-</br>
+        
+        </br>
         
         <!-- Contact Section-->
         <section class="page-section" id="contact">
