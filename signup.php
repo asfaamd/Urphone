@@ -7,11 +7,11 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $signup = new Signup();
         $result = $signup->evaluate($_POST);
-        if($result != "empty"){
-            echo $result;
-            header("Location: index_member.php", true, 301);
+        if($result == ""){
+            header("Location: login.php", true, 301);
             exit();
         } else{
+            echo $result;
         }
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -76,7 +76,7 @@
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input  value ="<?php echo $username?>" class="form-control" type="text" name="username" placeholder="Enter your name..." required />
-                                <label for="username">Full name</label>
+                                <label for="username">Username</label>
                             </div>
 
                             <!-- Email address input-->

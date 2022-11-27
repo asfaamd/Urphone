@@ -1,3 +1,28 @@
+<?php
+    session_start();
+    include("be_connect.php");
+    include("be_login.php");
+
+    $username = "";
+    $email = "";
+    $password = "";
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $login = new Login();
+        $result = $login->evaluate($_POST);
+        if($result == ""){
+            header("Location: index_member.php", true, 301);
+            exit();
+        } else{
+            echo $result;
+        }
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    }
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -37,7 +62,7 @@
                 </div>
             </div>
         </nav>
-        
+
         </br>
         
         <!-- Contact Section-->
@@ -50,34 +75,31 @@
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
-                        <form action="#.php" method="post" id="contactForm">
+                        <form method="post" id="contactForm">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" name="username" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <input  value ="<?php echo $username?>" class="form-control" type="text" name="username" placeholder="Enter your name..." required />
+                                <label for="username">Username</label>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input value ="<?php echo $email?>" class="form-control" type="email" name="email" placeholder="name@example.com" required />
                                 <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
+
                             <!-- Password input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="exampleInputPassword1" type="password" name="password" placeholder="Password" data-sb-validations="required" />
+                                <input value ="<?php echo $password?>" class="form-control" type="password" name="password" placeholder="Password" required />
                                 <label for="password">Password</label>
-                                <div class="invalid-feedback" data-sb-feedback="password:required">A password is required.</div>
                             </div>
 
         
                             <!-- Submit and sign up Button-->
                             <div class="row">
-                                <div class="col">
+                                <div class=" col">
                                     <br></br>
-                                    <!--<a href="index_member.php" button class="btn btn-primary btn-info text-white btn-xl" name="btnLogin">Login</button> </a>-->
-                                    <a button class="btn btn-primary btn-info text-white btn-xl" name="btnLogin">Login</button> </a>
+                                    <input class="btn btn-primary btn-xl btn-info text-light" type="submit" id="button" value="Log in">
+                                <!--<a href="index_member.php" button class="btn btn-primary btn-xl btn-info text-light">Sign up</button> </a>-->
                                 </div>
                                 <div class="col">
                                     <br>Don't have account?</br>
