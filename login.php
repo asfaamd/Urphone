@@ -1,23 +1,26 @@
 <?php
     session_start();
+    
     include("be_connect.php");
     include("be_login.php");
 
-    $username = "";
     $email = "";
     $password = "";
+
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
         $login = new Login();
         $result = $login->evaluate($_POST);
+
         if($result == ""){
-            header("Location: index_member.php", true, 301);
-            exit();
+
         } else{
             echo $result;
+            header("Location: index_member.php", true, 301);
+            exit();
         }
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
     }
     
 
@@ -76,20 +79,15 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
                         <form method="post" id="contactForm">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input  value ="<?php echo $username?>" class="form-control" type="text" name="username" placeholder="Enter your name..." required />
-                                <label for="username">Username</label>
-                            </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input value ="<?php echo $email?>" class="form-control" type="email" name="email" placeholder="name@example.com" required />
+                                <input name="email" value="<?php echo $email ?>" class="form-control" id="text" type="email" placeholder="name@example.com" required />
                                 <label for="email">Email address</label>
                             </div>
 
                             <!-- Password input-->
                             <div class="form-floating mb-3">
-                                <input value ="<?php echo $password?>" class="form-control" type="password" name="password" placeholder="Password" required />
+                                <input name="password" value="<?php echo $password ?>" class="form-control" id="text" type="password" placeholder="Password" required />
                                 <label for="password">Password</label>
                             </div>
 
