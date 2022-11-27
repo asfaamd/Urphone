@@ -1,3 +1,29 @@
+<?php
+    session_start();
+    
+    include("be_connect.php");
+    include("be_admin_login.php");
+
+    $email = "";
+    $password = "";
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+        $login = new Login();
+        $result = $login->evaluate($_POST);
+
+        if($result == ""){
+            header("Location: index_admin.php", true, 301);
+            exit();
+        } else{
+            echo $result;
+        }
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

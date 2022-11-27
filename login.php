@@ -13,11 +13,10 @@
         $result = $login->evaluate($_POST);
 
         if($result == ""){
-
-        } else{
-            echo $result;
             header("Location: index_member.php", true, 301);
             exit();
+        } else{
+            echo $result;
         }
         $email = $_POST['email'];
         $password = $_POST['password'];
