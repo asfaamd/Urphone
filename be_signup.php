@@ -5,15 +5,15 @@
         public function evaluate($data){
             foreach($data as $key => $value){
                 if(empty($value)){
-                    $error = $error . $key . "is empty!<br>";
+                    $this->error = $this->error . $key . "is empty!<br>";
                 } 
             }
 
-            if($error == ""){
+            if($this->error == ""){
                 //no error
                 $this->create_user($data);
             }else{
-                return $error;
+                return $this->error;
             }
         }
 

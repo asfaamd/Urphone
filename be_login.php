@@ -3,7 +3,7 @@
         private $error = "";
 
         public function evaluate($data){
-            $email = $data['username'];
+            $email = $data['email'];
             $password = $data['password'];
             
             //query atau sintaks
