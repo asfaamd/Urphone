@@ -42,29 +42,29 @@
         <br></br>
 
         <div class="container">
-            <h1 class="text-secondary">Insert article</h1>
+            <h1 class="text-secondary">Insert Article</h1>
             <div class="row">
                 <div class="col">
                     <div class="form-group">
-                        <label>Article title</label>
+                        <label>Article Title</label>
                         <input class="form-control" type="text" placeholder="Insert article input">
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label>Article source</label>
+                        <label>Article Source</label>
                         <input class="form-control" type="text" placeholder="Insert article source">
                     </div>
                 </div>
                 <p></p>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <label for="exampleFormControlTextarea1">Article Content</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Insert article" rows="3"></textarea>
                 </div>
                 <p></p>
                 <form>
                     <div class="form-group">
-                        <label for="exampleFormControlFile1">Input article picture</label><p></p>
+                        <label for="exampleFormControlFile1">Article Picture</label><p></p>
                         <input type="file" class="form-control-file" id="exampleFormControlFile1">
                     </div>
                 </form>
