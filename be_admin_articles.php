@@ -50,7 +50,7 @@ class Articles_Input
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8"
@@ -59,22 +59,22 @@ class Articles_Input
     <title>Contoh</title>
 </head>
 <body>
-    <?php echo $title; ?>
+    <?php# echo $title; ?>
     <br>
-    <?php echo $content; ?>
+    <?php# echo $content; ?>
     <br>
-    <?php echo $source; ?>
+    <?php# echo $source; ?>
     <br>
-    <?php if (isset($file)) {
-        echo $file['name'];} ?>
+    <?php# if (isset($file)) {
+        #echo $file['name'];} ?>
     <br>
-    <?php echo $summary; ?>
+    <?php #echo $summary; ?>
     <br>
     <?php 
-        foreach ($_SESSION as $key => $value) {
-        echo $key;
-        echo $value;
-        }
+        #foreach ($_SESSION as $key => $value) {
+        #echo $key;
+        #echo $value;
+        #}
     ?>
 </body>
-</html>
+</html> -->
