@@ -1,3 +1,9 @@
+<?php
+include("be_connect.php");
+$DB = new Database();
+$query = "SELECT * FROM article";
+$result = $DB->read($query);
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -44,7 +50,24 @@
         </br>
         
         <div class="container">
-            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+            <?php foreach ($result as $article) { ?>
+                <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                    <div class="row g-0">
+                        <div class="col-md-4" style="max-width:100%">
+                            <img src="assets/img/<?php echo $article['ArticlePict']; ?>" class="img-fluid rounded-start" alt="Ini gambar">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $article['ArticleTitle']; ?></h5>
+                                <p class="card-text"><?php echo $article['ArticleSummary']; ?></p>
+                                <p class="card-text text-muted"><?php echo $article['ArticleSource']; ?></p>
+                                <a href="admin_article_page.php?article=<?php echo $article['ArticleID']; ?>" class="btn btn-primary btn-info text-light">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+            <!-- <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
                 <div class="row g-0">
                     <div class="col-md-4" style="max-width:100%">
                         <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
@@ -89,7 +112,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Footer-->
         <footer class="footer text-center">

@@ -31,6 +31,13 @@
         $picture = $_POST['name'];
     }
     
+    if (isset($_GET)){
+    $id = $_GET['article'];
+    $DB = new Database();
+    $query = "SELECT * FROM article WHERE ArticleID=$id";
+    $result = $DB->read($query)[0];
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -76,39 +83,47 @@
         <br></br>
         <br></br>
 
-        <form action="be_admin_article.php" method="post" enctype="multipart/form-data">
+        <form action="admin_input_article.php" method="post" enctype="multipart/form-data">
             <div class="container">
                 <h1 class="text-secondary">Insert Article</h1>
                 <div class="row">
                     <div class="col">
                         <div class="form-group">
                             <label>Article Title</label>
-                            <input name="title" class="form-control" type="text" placeholder="Insert article input">
+                            <input name="title" class="form-control" type="text" placeholder="Insert article input" value="<?php if (isset($result['ArticleTitle'])) {
+                                echo $result['ArticleTitle']; } ?>">
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
                             <label>Article Source</label>
-                            <input name="source" class="form-control" type="text" placeholder="Insert article source">
+                            <input name="source" class="form-control" type="text" placeholder="Insert article source" value="<?php if (isset($result['ArticleSource'])) {
+                                echo $result['ArticleSource']; } ?>">
                         </div>
                     </div>
                     <p></p>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Article Content</label>
-                        <textarea name="content" class="form-control" id="exampleFormControlTextarea1" placeholder="Insert article" rows="3"></textarea>
+                        <textarea name="content" class="form-control" id="exampleFormControlTextarea1" placeholder="Insert article" rows="3"><?php if (isset($result['ArticleContent'])) {
+                                echo $result['ArticleContent']; } ?></textarea>
                     </div>
                     <p></p>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Article Summary</label>
-                        <textarea name="summary" class="form-control" id="exampleFormControlTextarea1" placeholder="Insert summary" rows="3"></textarea>
+                        <textarea name="summary" class="form-control" id="exampleFormControlTextarea1" placeholder="Insert summary" rows="3"><?php if (isset($result['ArticleSummary'])) {
+                                echo $result['ArticleSummary']; } ?></textarea>
                     </div>
                     <p></p>
-                    <form>
+                    <?php
+                     if (!isset($result['ArticlePict'])) {?>
+                         <form>
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Article Picture</label><p></p>
                             <input name="picture" type="file" class="form-control-file" id="exampleFormControlFile1">
                         </div>
                     </form>
+                    <?php }?>
+                    
                 </div>
                 <div class="text-center">
                     <input type="submit" name="submit">

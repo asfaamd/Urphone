@@ -38,6 +38,7 @@ class Articles_Input
             $name = $file['name'];
             $query = "INSERT INTO article(ArticleTitle, ArticlePict, ArticleContent, ArticleSource, ArticleSummary, UserID) VALUES ('$title','$name','$content','$source','$summary','$user')";
             $cek = $DB->save($query);
+            return $cek;
             // if ($cek) {
             //     header("Location: admin_article.php", true, 301);
             // } else {
@@ -45,6 +46,8 @@ class Articles_Input
             // }
         }
     }
+
+    
 }
 
 
