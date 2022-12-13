@@ -41,38 +41,45 @@
         <br></br>
         <br></br>
 
-        <div class="container">
-            <h1 class="text-secondary">Insert Article</h1>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Article Title</label>
-                        <input class="form-control" type="text" placeholder="Insert article input">
+        <form action="save_article.php" method="post" enctype="multipart/form-data">
+            <div class="container">
+                <h1 class="text-secondary">Insert Article</h1>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Article Title</label>
+                            <input name="title" class="form-control" type="text" placeholder="Insert article input">
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label>Article Source</label>
-                        <input class="form-control" type="text" placeholder="Insert article source">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Article Source</label>
+                            <input name="source" class="form-control" type="text" placeholder="Insert article source">
+                        </div>
                     </div>
-                </div>
-                <p></p>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Article Content</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Insert article" rows="3"></textarea>
-                </div>
-                <p></p>
-                <form>
+                    <p></p>
                     <div class="form-group">
-                        <label for="exampleFormControlFile1">Article Picture</label><p></p>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        <label for="exampleFormControlTextarea1">Article Content</label>
+                        <textarea name="content" class="form-control" id="exampleFormControlTextarea1" placeholder="Insert article" rows="3"></textarea>
                     </div>
-                </form>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Article Summary</label>
+                        <textarea name="summary" class="form-control" id="exampleFormControlTextarea1" placeholder="Insert summary" rows="3"></textarea>
+                    </div>
+                    <p></p>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Article Picture</label><p></p>
+                            <input name="picture" type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                    </form>
+                </div>
+                <div class="text-center">
+                    <input type="submit" name="submit">
+                    <!-- <a href="#.php" button class="btn btn-primary btn-lg btn-info text-light">Save changes</button> </a> -->
+                </div>
             </div>
-            <div class="text-center">
-                <a href="#.php" button class="btn btn-primary btn-lg btn-info text-light">Save changes</button> </a>
-            </div>
-        </div>
+        </form>
 
         <br></br>
         <br></br>

@@ -3,11 +3,11 @@
         private $error = "";
 
         public function evaluate($data){
-            $email = $data['username'];
+            $email = $data['email'];
             $password = $data['password'];
             
             //query atau sintaks
-            $query = "select * from member where MemberEmail = '$email' limit 1";
+            $query = "select * from administrator where AdminEmail = '$email' limit 1";
             
             $DB = new Database();
             $result = $DB->read($query);

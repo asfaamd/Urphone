@@ -75,17 +75,17 @@
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form action="admin_login.php" method="POST" id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input name="email" class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- Password input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" data-sb-validations="required" />
+                                <input name="password" class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" data-sb-validations="required" />
                                 <label for="password">Password</label>
                                 <div class="invalid-feedback" data-sb-feedback="password:required">A password is required.</div>
                             </div>
@@ -108,7 +108,8 @@
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
                             <div class="text-center">
-                                <a href="index_admin.php" button class="btn btn-primary btn-xl btn-info text-light">Login</button> </a>
+                                <button type="submit">Login</button>
+                                <!-- <a href="index_admin.php" button class="btn btn-primary btn-xl btn-info text-light">Login</button> </a> -->
                             </div>
                         </form>
                     </div>

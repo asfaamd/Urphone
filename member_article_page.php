@@ -1,3 +1,12 @@
+<?php
+include('be_connect.php');
+$article_id = $_GET['article'];
+$query = "SELECT * FROM article WHERE ArticleID=$article_id";
+$DB = new Database();
+$result = $DB->read($query)[0];
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -43,33 +52,14 @@
         <br></br>
         <div class="container">
             <div class="text-center">
-                <h1>Ini Artikel</h1>
+                <h1><?php echo $result['ArticleTitle'] ?></h1>
             </div>
             <p></p>
             <div class="text-center">
-                <img src="gadget.jpeg" class="img-fluid" alt="Responsive image" style="height:300px">
+                <img src="<?php echo $result['ArticlePict'] ?>" class="img-fluid" alt="Responsive image" style="height:300px">
             </div>
             <p></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Porttitor lacus luctus accumsan tortor posuere ac. Fames ac 
-                turpis egestas integer eget aliquet. Nunc scelerisque viverra mauris in aliquam sem. Arcu 
-                dictum varius duis at consectetur lorem. Sagittis aliquam malesuada bibendum arcu vitae 
-                elementum curabitur. Pulvinar sapien et ligula ullamcorper malesuada proin libero. Id donec 
-                ultrices tincidunt arcu non sodales neque sodales. Mauris commodo quis imperdiet massa. 
-                Convallis aenean et tortor at. Pulvinar elementum integer enim neque volutpat ac. In ornare 
-                quam viverra orci sagittis. Phasellus vestibulum lorem sed risus ultricies tristique nulla 
-                aliquet enim. Consequat mauris nunc congue nisi vitae suscipit tellus. Elit duis tristique 
-                sollicitudin nibh sit amet commodo nulla. Elit ullamcorper dignissim cras tincidunt lobortis.
-                Turpis tincidunt id aliquet risus feugiat in ante. Dignissim enim sit amet venenatis urna 
-                cursus eget nunc scelerisque. Volutpat consequat mauris nunc congue nisi vitae suscipit 
-                tellus mauris. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. 
-                Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Enim ut sem viverra 
-                aliquet eget sit amet. Dolor sit amet consectetur adipiscing. Augue ut lectus arcu bibendum 
-                at varius vel pharetra. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. 
-                Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Est ante in nibh 
-                mauris cursus. Consectetur lorem donec massa sapien faucibus et molestie ac. Lacus vel facilisis 
-                volutpat est. Elit ullamcorper dignissim cras tincidunt lobortis. Tempor commodo ullamcorper a 
-                lacus vestibulum sed arcu.</p>
+            <p><?php echo $result['ArticleContent'] ?></p>
         </div>
         
         <!-- Footer-->
