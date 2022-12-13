@@ -1,3 +1,38 @@
+<?php
+    session_start();
+    
+    include("be_connect.php");
+    include("be_admin_articles.php");
+
+    $title = "";
+    $source = "";
+    $content = "";
+    $summary = "";
+    $picture = "";
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+        $article_input = new Articles_Input();
+        $result = $article_input->evaluate($_POST);
+
+        if($result == ""){
+            header("Location: admin_articles.php", true, 301);
+            exit();
+        } else{
+            echo $result;
+        }
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        
+        $title = $_POST['title'];
+        $source = $_POST['source'];
+        $content = $_POST['content'];
+        $summary = $_POST['summary'];
+        $picture = $_POST['name'];
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,7 +76,7 @@
         <br></br>
         <br></br>
 
-        <form action="save_article.php" method="post" enctype="multipart/form-data">
+        <form action="be_admin_article.php" method="post" enctype="multipart/form-data">
             <div class="container">
                 <h1 class="text-secondary">Insert Article</h1>
                 <div class="row">
@@ -62,6 +97,7 @@
                         <label for="exampleFormControlTextarea1">Article Content</label>
                         <textarea name="content" class="form-control" id="exampleFormControlTextarea1" placeholder="Insert article" rows="3"></textarea>
                     </div>
+                    <p></p>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Article Summary</label>
                         <textarea name="summary" class="form-control" id="exampleFormControlTextarea1" placeholder="Insert summary" rows="3"></textarea>
