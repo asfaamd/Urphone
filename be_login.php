@@ -13,7 +13,7 @@
             $result = $DB->read($query);
 
             if($result){
-                
+
                 $row = $result[0];
                 
                 if($password == $row['MemberPassword']){
