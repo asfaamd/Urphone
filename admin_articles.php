@@ -67,52 +67,7 @@ $result = $DB->read($query);
                     </div>
                 </div>
             <?php } ?>
-            <!-- <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:100%">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Ini Artikel</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text text-muted">Detik.com</p>
-                            <a href="admin_article_page.php" class="btn btn-primary btn-info text-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:100%">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Ini Artikel</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text text-muted">Detik.com</p>
-                            <a href="admin_article_page.php" class="btn btn-primary btn-info text-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:100%">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Ini Artikel</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text text-muted">Detik.com</p>
-                            <a href="admin_article_page.php" class="btn btn-primary btn-info text-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+            
 
         <!-- Footer-->
         <footer class="footer text-center">

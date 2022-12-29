@@ -1,12 +1,11 @@
 <?php
-include('be_connect.php');
-$article_id = $_GET['article'];
-$query = "SELECT * FROM article WHERE ArticleID=$article_id";
+include("be_connect.php");
 $DB = new Database();
+$id = $_GET['article'];
+$query = "SELECT * FROM article where ArticleID=$id";
 $result = $DB->read($query)[0];
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -52,15 +51,17 @@ $result = $DB->read($query)[0];
         <br></br>
         <div class="container">
             <div class="text-center">
-                <h1><?php echo $result['ArticleTitle'] ?></h1>
+                <h1><?php echo $result['ArticleTitle']; ?></h1>
             </div>
             <p></p>
             <div class="text-center">
-                <img src="<?php echo $result['ArticlePict'] ?>" class="img-fluid" alt="Responsive image" style="height:300px">
+                <img src="assets/img/<?php echo $result['ArticlePict']; ?>" class="img-fluid" alt="Responsive image" style="height:300px">
             </div>
             <p></p>
-            <p><?php echo $result['ArticleContent'] ?></p>
+            <p><?php echo $result['ArticleContent']; ?></p>
         </div>
+        <br></br>
+        <br></br>
         
         <!-- Footer-->
         <footer class="footer text-center">

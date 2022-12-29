@@ -108,7 +108,7 @@
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
                             <div class="text-center">
-                                <button type="submit">Login</button>
+                                <button type="submit" button class="btn btn-primary btn-xl btn-info text-light">Login</button>
                                 <!-- <a href="index_admin.php" button class="btn btn-primary btn-xl btn-info text-light">Login</button> </a> -->
                             </div>
                         </form>

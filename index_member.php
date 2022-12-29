@@ -99,6 +99,12 @@
             </div>
         </section>
         <!-- About Section-->
+        <?php
+            include("be_connect.php");
+            $DB = new Database();
+            $query = "SELECT * FROM article LIMIT 2";
+            $result = $DB->read($query);
+        ?>
         <section class="page-section bg-secondary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
@@ -106,37 +112,25 @@
                 <br>
                 </br>
                 <!-- About Section Content-->
-                <div class="card border-white text-white bg-secondary mb-3" style="w-100;">
-                    <div class="row g-0">
-                        <div class="col-md-4" style="max-width:100%">
-                            <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Ini Artikel</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Detik.com</small></p>
-                                <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
+                <div class="container">
+                    <?php foreach ($result as $article) { ?>
+                        <div class="card border-white text-white bg-secondary mb-3" style="w-100;">
+                            <div class="row g-0">
+                                <div class="col-md-4" style="max-width:100%">
+                                    <img src="assets/img/<?php echo $article['ArticlePict']; ?>" class="img-fluid rounded-start" alt="Ini gambar">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php echo $article['ArticleTitle']; ?></h5>
+                                        <p class="card-text"><?php echo $article['ArticleSummary']; ?></p>
+                                        <p class="card-text text-muted"><?php echo $article['ArticleSource']; ?></p>
+                                        <a href="article_page.php?article=<?php echo $article['ArticleID']; ?>" class="btn btn-primary btn-info text-light">Read More</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="card border-white text-white bg-secondary mb-3" style="w-100;">
-                    <div class="row g-0">
-                        <div class="col-md-4" style="max-width:100%">
-                            <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Ini Artikel</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Detik.com</small></p>
-                                <a href="#" class="btn btn-primary btn-info text-light">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <?php } ?>
+                <div>
                 <br>
                 </br>
                 <div class="text-center">
