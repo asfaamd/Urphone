@@ -80,8 +80,6 @@
         </nav>
         
         <br></br>
-        <br></br>
-        <br></br>
 
         <form action="admin_input_article.php" method="post" enctype="multipart/form-data">
             <div class="container">
@@ -126,7 +124,7 @@
                     
                 </div>
                 <div class="text-center">
-                    <input type="submit" name="submit">
+                    <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit">
                     <!-- <a href="#.php" button class="btn btn-primary btn-lg btn-info text-light">Save changes</button> </a> -->
                 </div>
             </div>

@@ -102,7 +102,7 @@
         <?php
             include("be_connect.php");
             $DB = new Database();
-            $query = "SELECT * FROM article LIMIT 2";
+            $query = "SELECT * FROM article ORDER BY ArticleID DESC LIMIT 2";
             $result = $DB->read($query);
         ?>
         <section class="page-section bg-secondary text-white mb-0" id="about">
