@@ -60,9 +60,6 @@ $result = $DB->read($query)[0];
             </div>
             <p></p>
             <p><?php echo $result['ArticleContent']; ?></p>
-            <!-- <div class="text-center">
-                <a href="admin_input_article.php?article=<?php // echo $result['ArticleID']; ?>" button class="btn btn-primary btn-lg btn-info text-light">edit articles</button> </a>
-            </div> -->
         </div>
         <br></br>
         <br></br>
