@@ -1,3 +1,10 @@
+<?php
+include("be_connect.php");
+$DB = new Database();
+$query = "SELECT * FROM product ORDER BY Product_ID DESC";
+$result = $DB->read($query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -51,37 +58,24 @@
                 </div>
             </div>
             <br>
+
             <!--Recommendation lists-->
-            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:210px">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Apple Watch Series 6</h5>
-                            <p><h7 class="card-text">Rp2.000.000</h7>
-                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
-                            <p><a href="admin_catalog_page.php" class="btn btn- btn-info text-light">Read More</a>
+            <?php foreach ($result as $product) { ?>
+                <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                    <div class="row g-0">
+                        <div class="col-md-4" style="max-width:210px">
+                        <img src="assets/img/<?php echo $product['ProductPicture']; ?>" class="img-fluid rounded-start" alt="Ini gambar">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $product['ProductTitle']; ?></h5>
+                                <p><h7 class="card-text">Rp<?php echo $product['ProductPrice']; ?></h7>
+                                <p><a href="admin_catalog_page.php?product=<?php echo $product['Product_ID']; ?>" class="btn btn-primary btn-info text-light">Read More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:210px">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Apple Watch Series 6</h5>
-                            <p><h7 class="card-text">Rp2.000.000</h7>
-                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
-                            <p><a href="admin_catalog_page.php" class="btn btn- btn-info text-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
 
         

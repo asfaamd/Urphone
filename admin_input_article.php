@@ -21,8 +21,8 @@
         } else{
             echo $result;
         }
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+        // $email = $_POST['email'];
+        // $password = $_POST['password'];
         
         $title = $_POST['title'];
         $source = $_POST['source'];

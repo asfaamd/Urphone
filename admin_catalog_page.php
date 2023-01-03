@@ -1,3 +1,11 @@
+<?php
+include("be_connect.php");
+$DB = new Database();
+$id = $_GET['product'];
+$query = "SELECT * FROM product where Product_ID=$id";
+$result = $DB->read($query)[0];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,22 +49,12 @@
         <br></br>
 
         <div class="container">
-            <div class="row text-center">
-                <div class="col-md-6">
-                    <img src="jam.jpg" width="250px">
-                </div>
-                <div class="col-md-6">
-                    <h2 class="text-center text-secondary">Apple Watch Series 6</h2>
-                    </br>
-                    <div class="card border-secondary bg-secondary text-white" style="max-width: 500px;">
-                        <div class="card-body">
-                            </br>
-                            <h4>Edit this catalog?</h4>
-                            </br>
-                            <a href="admin_input_gadget.php" button class="btn btn-primary btn-info text-white btn-lg">Edit this catalog</button> </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center">
+                <h2 class="text-center text-secondary"> <?php echo $result['ProductTitle']; ?> </h2>
+                </br>
+            </div>
+            <div class="text-center">
+                <img src="assets/img/<?php echo $result['ProductPicture']; ?>" class="img-fluid" alt="Responsive image" style="height:300px">
             </div>
         </div>
         <br></br>
@@ -73,7 +71,7 @@
                             Network
                         </div>
                         <div class="col text-white">
-                            GSM/HSPA/LTE
+                            <?php echo $result['ProductNetwork']; ?>
                         </div>
                     </div>
                     </br>
@@ -83,7 +81,7 @@
                             Launch
                         </div>
                         <div class="col text-white">
-                            18 September 2020
+                            <?php echo $result['ProductLaunch']; ?>
                         </div>
                     </div>
                     </br>
@@ -93,7 +91,7 @@
                             Body
                         </div>
                         <div class="col text-white">
-                            Glass front, titanium case (44 x 38 x 10.4 mm)
+                            <?php echo $result['ProductBody']; ?>
                         </div>
                     </div>
                     </br>
@@ -103,7 +101,7 @@
                             Display
                         </div>
                         <div class="col text-white">
-                            Retina LTPO OLED, 1000 nites (1,78 inches)
+                            <?php echo $result['ProductDisplay']; ?>
                         </div>
                     </div>
                     </br>
@@ -113,7 +111,7 @@
                             Platform
                         </div>
                         <div class="col text-white">
-                            watchOS 7.0
+                            <?php echo $result['ProductPlatform']; ?>
                         </div>
                     </div>
                     </br>
@@ -123,7 +121,7 @@
                             Memory
                         </div>
                         <div class="col text-white">
-                            32 GB, 1 GB RAM
+                            <?php echo $result['ProductInternalMemory']; ?> GB
                         </div>
                     </div>
                     </br>
@@ -133,17 +131,17 @@
                             Camera
                         </div>
                         <div class="col text-white">
-                           None
+                            <?php echo $result['ProductCamera']; ?> MP
                         </div>
                     </div>
                     </br>
-                    <!--SOund-->
+                    <!--Sound-->
                     <div class="row">
                         <div class="col text-info">
                             Sound
                         </div>
                         <div class="col text-white">
-                            Loudspeaker
+                            <?php echo $result['ProductSound']; ?>
                         </div>
                     </div>
                     </br>
@@ -153,7 +151,7 @@
                             Comms
                         </div>
                         <div class="col text-white">
-                            Wi-fi 802.11 b/g/h, dual-band WLAN
+                            <?php echo $result['ProductComms']; ?>
                         </div>
                     </div>
                     </br>
@@ -163,7 +161,7 @@
                             Features
                         </div>
                         <div class="col text-white">
-                            Accelerometer, gyro, heart rate, barometer, compass, natural language command
+                            <?php echo $result['ProductFeature']; ?>
                         </div>
                     </div>
                     </br>
@@ -173,7 +171,7 @@
                             Battery
                         </div>
                         <div class="col text-white">
-                            Wireless charging Li-ion 303.8 mAh (1.17 Wh), non-removable
+                            <?php echo $result['ProductBattery']; ?>
                         </div>
                     </div>
                     </br>
@@ -183,8 +181,7 @@
                             Misc
                         </div>
                         <div class="col text-white">
-                            Color Titanium, space black
-                            Model A229, 12294, A2375 
+                            <?php echo $result['ProductMisc']; ?>
                         </div>
                     </div>
                     </br>
@@ -200,25 +197,9 @@
             <div class="row">
                 <div class="col">
                     <div class="card bg-secondary text-light" style="width: 254px;">
-                        <img src="jam.jpg" class="card-img-top" style="width:250px">
+                        <img src="assets/img/<?php echo $result['ProductPicture']; ?>" class="card-img-top" alt="Responsive image" style="width:250px">
                         <div class="card-body">
-                            <h5 class="card-text">www.dinomarket.com</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-secondary text-light" style="width: 254px;">
-                        <img src="jam.jpg" class="card-img-top" style="width:250px">
-                        <div class="card-body">
-                            <h5 class="card-text">www.dinomarket.com</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-secondary text-light" style="width: 254px;">
-                        <img src="jam.jpg" class="card-img-top" style="width:250px">
-                        <div class="card-body">
-                            <h5 class="card-text">www.dinomarket.com</h5>
+                            <h5 class="card-text"> <?php echo $result['WhereToBuy']; ?> </h5>
                         </div>
                     </div>
                 </div>

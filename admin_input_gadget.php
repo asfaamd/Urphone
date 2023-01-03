@@ -1,3 +1,88 @@
+<?php
+    session_start();
+    
+    include("be_connect.php");
+    include("be_admin_catalog.php");
+
+    $producttitle = "";
+    $price = "";
+    $network = "";
+    $launch = "";
+    $body = "";
+    $display = "";
+    $platform = "";
+    $internalmemory = "";
+    $camera = "";
+    $sound = "";
+    $comms = "";
+    $feature = "";
+    $battery = "";
+    $misc = "";
+    $ram = "";
+    $externalmemory = "";
+    $os = "";
+    $gpu = "";
+    $whatgadget = "";
+    $whatoccupation = "";
+    $whatfor = "";
+    $wheretobuy = "";
+    $brand = "";
+    $picture = "";
+    
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+        $catalog_input = new Catalog_Input();
+        $result = $catalog_input->evaluate($_POST);
+
+        if($result == ""){
+            header("Location: admin_gadget_catalog.php", true, 301);
+            exit();
+        } else{
+            echo $result;
+        }
+        
+        // $title = $_POST['title'];
+        // $source = $_POST['source'];
+        // $content = $_POST['content'];
+        // $summary = $_POST['summary'];
+        // $picture = $_POST['name'];
+        
+        $producttitle = $_POST['producttitle'];
+        $price = $_POST['price'];
+        $network = $_POST['network'];
+        $launch = $_POST['launch'];
+        $body = $_POST['body'];
+        $display = $_POST['display'];
+        $platform = $_POST['platform'];
+        $internalmemory = $_POST['internalmemory'];
+        $camera = $_POST['camera'];
+        $sound = $_POST['sound'];
+        $comms = $_POST['comms'];
+        $feature = $_POST['feature'];
+        $battery = $_POST['battery'];
+        $misc = $_POST['misc'];
+        $ram = $_POST['ram'];
+        $externalmemory = $_POST['externalmemory'];
+        $os = $_POST['os'];
+        $gpu = $_POST['gpu'];
+        $whatgadget = $_POST['whatgadget'];
+        $whatoccupation = $_POST['whatoccupation'];
+        $whatfor = $_POST['whatfor'];
+        $wheretobuy = $_POST['wheretobuy'];
+        $brand = $_POST['brand'];
+        $picture = $_POST['name'];
+    }
+    
+    if (isset($_GET)){
+    $id = $_GET['product'];
+    $DB = new Database();
+    $query = "SELECT * FROM product WHERE ProductID=$id";
+    $result = $DB->read($query)[0];
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -38,188 +123,227 @@
         </nav>
 
         <br></br>
-        <br></br>
-        <br></br>
         
         <!--form untuk input gadget-->
-        <div class="container">
-            <h1 class="text-secondary">Insert gadget catalog</h1>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product title</label>
-                        <input class="form-control" type="text" placeholder="Insert product title">
+        <form action="admin_input_gadget.php" method="post" enctype="multipart/form-data">
+            <div class="container">
+                <h1 class="text-secondary">Insert gadget catalog</h1>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product title</label>
+                            <input input name="producttitle" class="form-control" type="text" placeholder="Insert product title" value="<?php if (isset($result['ProductTitle'])) {
+                                echo $result['ProductTitle']; } ?>">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product price</label>
+                            <input name="price" class="form-control" type="text" placeholder="Insert product price" value="<?php if (isset($result['ProductPrice'])) {
+                                echo $result['ProductPrice']; } ?>">
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product price</label>
-                        <input class="form-control" type="text" placeholder="Insert product price">
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product network</label>
+                            <input name="network" class="form-control" type="text" placeholder="Insert product network" value="<?php if (isset($result['ProductNetwork'])) {
+                                echo $result['ProductNetwork']; } ?>">
+                        </div>
                     </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product launch</label>
+                            <input name="launch" class="form-control" type="text" placeholder="Insert product launch" value="<?php if (isset($result['ProductLaunch'])) {
+                                echo $result['ProductLaunch']; } ?>">
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product body</label>
+                            <input name="body" class="form-control" type="text" placeholder="Insert product body" value="<?php if (isset($result['ProductBody'])) {
+                                echo $result['ProductBody']; } ?>">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product display</label>
+                            <input name="display" class="form-control" type="text" placeholder="Insert product display" value="<?php if (isset($result['ProductDisplay'])) {
+                                echo $result['ProductDisplay']; } ?>">
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product platform</label>
+                            <input name= "platform" class="form-control" type="text" placeholder="Insert product platform" value="<?php if (isset($result['ProductPlatform'])) {
+                                echo $result['ProductPlatform']; } ?>">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product Internal memory</label>
+                            <input name="internalmemory" class="form-control" type="text" placeholder="Insert product internal memory" value="<?php if (isset($result['ProductInternalMemory'])) {
+                                echo $result['ProductInternalMemory']; } ?>">
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product camera</label>
+                            <input name="camera" class="form-control" type="text" placeholder="Insert product camera" value="<?php if (isset($result['ProductCamera'])) {
+                                echo $result['ProductCamera']; } ?>">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product sound</label>
+                            <input name="sound" class="form-control" type="text" placeholder="Insert product sound" value="<?php if (isset($result['ProductSound'])) {
+                                echo $result['ProductSound']; } ?>">
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product comms</label>
+                            <input name= "comms" class="form-control" type="text" placeholder="Insert product comms" value="<?php if (isset($result['ProductComms'])) {
+                                echo $result['ProductComms']; } ?>">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product feature</label>
+                            <input name="feature" class="form-control" type="text" placeholder="Insert product feature" value="<?php if (isset($result['ProductFeature'])) {
+                                echo $result['ProductFeature']; } ?>">
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product battery</label>
+                            <input name="battery" class="form-control" type="text" placeholder="Insert product battery" value="<?php if (isset($result['ProductBattery'])) {
+                                echo $result['ProductBattery']; } ?>">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product misc</label>
+                            <input name="misc" class="form-control" type="text" placeholder="Insert product misc" value="<?php if (isset($result['ProductMisc'])) {
+                                echo $result['ProductMisc']; } ?>">
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product RAM</label>
+                            <input name="ram" class="form-control" type="text" placeholder="Insert product RAM" value="<?php if (isset($result['ProductRAM'])) {
+                                echo $result['ProductRAM']; } ?>">
+                        </div>
+                    </div>
+                    <div class="col">
+                    <div class="form-group">
+                            <label>Product external memory</label>
+                            <input name="externalmemory" class="form-control" type="text" placeholder="Insert product external memory" value="<?php if (isset($result['ProductExternalMemory'])) {
+                                echo $result['ProductExternalMemory']; } ?>">
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product OS</label>
+                            <input name="os" class="form-control" type="text" placeholder="Insert product RAM" value="<?php if (isset($result['ProductOS'])) {
+                                echo $result['ProductOS']; } ?>">
+                        </div>
+                    </div>
+                    <div class="col">
+                    <div class="form-group">
+                            <label>Product GPU</label>
+                            <input name="gpu" class="form-control" type="text" placeholder="Insert product external memory" value="<?php if (isset($result['ProductGPU'])) {
+                                echo $result['ProductGPU']; } ?>">
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Product kinds</label> <!--Jenis gadgetnya apa gitu-->
+                            <input name="whatgadget" class="form-control" type="text" placeholder="Insert product kinds" value="<?php if (isset($result['WhatGadget'])) {
+                                echo $result['WhatGadget']; } ?>">
+                        </div>
+                    </div>
+                    <div class="col">
+                    <div class="form-group">
+                            <label>User occupation</label> <!--untuk kasih rekomen sesuai kerjaan user-->
+                            <input name="whatoccupation" class="form-control" type="text" placeholder="Insert user occupation" value="<?php if (isset($result['WhatOccupation'])) {
+                                echo $result['WhatOccupation']; } ?>">
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Gadget usage</label> <!--gadgetnya dipake buat apa-->
+                            <input name="whatfor" class="form-control" type="text" placeholder="Insert gadget usage" value="<?php if (isset($result['WhatFor'])) {
+                                echo $result['WhatFor']; } ?>"> 
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                                <label>Buying links</label> 
+                                <input name="wheretobuy" class="form-control" type="text" placeholder="Insert product buying links" value="<?php if (isset($result['WhereToBuy'])) {
+                                echo $result['WhereToBuy']; } ?>">
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="row">
+                    <div class="col">
+                        <?php
+                        if (!isset($result['ArticlePict'])) {?>
+                            <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Article Picture</label><p></p>
+                                <input name="picture" type="file" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+                        </form>
+                        <?php }?>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                                <label>Product Brand</label>
+                                <input name="brand" class="form-control" type="text" placeholder="Insert product buying links" value="<?php if (isset($result['ProductBrand'])) {
+                                echo $result['ProductBrand']; } ?>">
+                        </div>
+                    </div>
+                    
+                </div>
+                <br></br>
+                <div class="text-center">
+                    <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit">
+                    <!-- <a href="#.php" button class="btn btn-primary btn-lg btn-info text-light">Save changes</button> </a> -->
                 </div>
             </div>
-            <p></p>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product network</label>
-                        <input class="form-control" type="text" placeholder="Insert product network">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product launch</label>
-                        <input class="form-control" type="text" placeholder="Insert product launch">
-                    </div>
-                </div>
-            </div>
-            <p></p>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product body</label>
-                        <input class="form-control" type="text" placeholder="Insert product body">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product display</label>
-                        <input class="form-control" type="text" placeholder="Insert product display">
-                    </div>
-                </div>
-            </div>
-            <p></p>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product body</label>
-                        <input class="form-control" type="text" placeholder="Insert product body">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product display</label>
-                        <input class="form-control" type="text" placeholder="Insert product display">
-                    </div>
-                </div>
-            </div>
-            <p></p>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product platform</label>
-                        <input class="form-control" type="text" placeholder="Insert product platform">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product memory</label>
-                        <input class="form-control" type="text" placeholder="Insert product memory">
-                    </div>
-                </div>
-            </div>
-            <p></p>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product camera</label>
-                        <input class="form-control" type="text" placeholder="Insert product camera">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product sound</label>
-                        <input class="form-control" type="text" placeholder="Insert product sound">
-                    </div>
-                </div>
-            </div>
-            <p></p>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product comms</label>
-                        <input class="form-control" type="text" placeholder="Insert product comms">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product feature</label>
-                        <input class="form-control" type="text" placeholder="Insert product feature">
-                    </div>
-                </div>
-            </div>
-            <p></p>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product battery</label>
-                        <input class="form-control" type="text" placeholder="Insert product battery">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product misc</label>
-                        <input class="form-control" type="text" placeholder="Insert product misc">
-                    </div>
-                </div>
-            </div>
-            <p></p>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product RAM</label>
-                        <input class="form-control" type="text" placeholder="Insert product RAM">
-                    </div>
-                </div>
-                <div class="col">
-                <div class="form-group">
-                        <label>Product external memory</label>
-                        <input class="form-control" type="text" placeholder="Insert product external memory">
-                    </div>
-                </div>
-            </div>
-            <p></p>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Product kinds</label> <!--Jenis gadgetnya apa gitu-->
-                        <input class="form-control" type="text" placeholder="Insert product kinds"> 
-                    </div>
-                </div>
-                <div class="col">
-                <div class="form-group">
-                        <label>User occupation</label> <!--untuk kasih rekomen sesuai kerjaan user-->
-                        <input class="form-control" type="text" placeholder="Insert user occupation">
-                    </div>
-                </div>
-            </div>
-            <p></p>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Gadget usage</label> <!--gadgetnya dipake buat apa-->
-                        <input class="form-control" type="text" placeholder="Insert gadget usage"> 
-                    </div>
-                </div>
-                <div class="col">
-                <div class="form-group">
-                        <label>Buying links</label> <!--untuk kasih rekomen sesuai kerjaan user-->
-                        <input class="form-control" type="text" placeholder="Insert product buying links">
-                    </div>
-                </div>
-            </div>
-            <p></p>
-            <form>
-                <div class="form-group">
-                    <label for="exampleFormControlFile1">Input article picture</label><p></p>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-            </form>
-            <br></br>
-            <div class="text-center">
-                <a href="#.php" button class="btn btn-primary btn-lg btn-info text-light">Save changes</button> </a>
-            </div>
-        </div>
+        </form>
         <br></br>
         <br></br>
         <br></br>

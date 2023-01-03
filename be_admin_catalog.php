@@ -1,7 +1,7 @@
 <?php
 //session_start();
 
-class Articles_Input
+class Catalog_Input
 {
     private $error = "";
 
