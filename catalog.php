@@ -1,3 +1,10 @@
+<?php
+include("be_connect.php");
+$DB = new Database();
+$id_produk = $_GET['id'];
+$query = "SELECT * FROM product WHERE Product_ID='" . $id_produk . "'";
+$result = $DB->read($query)[0];
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,7 +48,7 @@
         <br></br>
         </br>
         <div class="container">
-            <a class="nav-link text-secondary" href="recommendation.php">Recommendation /<span class="text-info"> Apple Watch Series 6</span></a>
+            <a class="nav-link text-secondary" href="recommendation.php">Recommendation /<span class="text-info"><?= $result['ProductTitle']; ?></span></a>
         </div>
         </br>
         <div class="container">
@@ -50,7 +57,7 @@
                     <img src="jam.jpg" width="250px">
                 </div>
                 <div class="col-md-6">
-                    <h2 class="text-center text-secondary">Apple Watch Series 6</h2>
+                    <h2 class="text-center text-secondary"><?= $result['ProductTitle']; ?></h2>
                     </br>
                     <div class="card border-secondary bg-secondary text-white" style="max-width: 500px;">
                         <div class="card-body">
@@ -77,7 +84,7 @@
                             Network
                         </div>
                         <div class="col text-white">
-                            GSM/HSPA/LTE
+                        <?= $result['ProductNetwork']; ?>
                         </div>
                     </div>
                     </br>
@@ -87,7 +94,7 @@
                             Launch
                         </div>
                         <div class="col text-white">
-                            18 September 2020
+                        <?= $result['ProductLaunch']; ?>
                         </div>
                     </div>
                     </br>
@@ -97,7 +104,7 @@
                             Body
                         </div>
                         <div class="col text-white">
-                            Glass front, titanium case (44 x 38 x 10.4 mm)
+                        <?= $result['ProductBody']; ?>
                         </div>
                     </div>
                     </br>
@@ -107,7 +114,7 @@
                             Display
                         </div>
                         <div class="col text-white">
-                            Retina LTPO OLED, 1000 nites (1,78 inches)
+                        <?= $result['ProductDisplay']; ?>
                         </div>
                     </div>
                     </br>
@@ -117,7 +124,7 @@
                             Platform
                         </div>
                         <div class="col text-white">
-                            watchOS 7.0
+                        <?= $result['ProductPlatform']; ?>
                         </div>
                     </div>
                     </br>
@@ -127,7 +134,7 @@
                             Memory
                         </div>
                         <div class="col text-white">
-                            32 GB, 1 GB RAM
+                        <?= $result['ProductInternalMemory']; ?>
                         </div>
                     </div>
                     </br>
@@ -137,7 +144,7 @@
                             Camera
                         </div>
                         <div class="col text-white">
-                           None
+                        <?= $result['ProductCamera']; ?>
                         </div>
                     </div>
                     </br>
@@ -147,7 +154,7 @@
                             Sound
                         </div>
                         <div class="col text-white">
-                            Loudspeaker
+                        <?= $result['ProductSound']; ?>
                         </div>
                     </div>
                     </br>
@@ -157,7 +164,7 @@
                             Comms
                         </div>
                         <div class="col text-white">
-                            Wi-fi 802.11 b/g/h, dual-band WLAN
+                        <?= $result['ProductComms']; ?>
                         </div>
                     </div>
                     </br>
@@ -167,7 +174,7 @@
                             Features
                         </div>
                         <div class="col text-white">
-                            Accelerometer, gyro, heart rate, barometer, compass, natural language command
+                        <?= $result['ProductFeature']; ?>
                         </div>
                     </div>
                     </br>
@@ -177,7 +184,7 @@
                             Battery
                         </div>
                         <div class="col text-white">
-                            Wireless charging Li-ion 303.8 mAh (1.17 Wh), non-removable
+                        <?= $result['ProductBattery']; ?>
                         </div>
                     </div>
                     </br>
@@ -187,8 +194,7 @@
                             Misc
                         </div>
                         <div class="col text-white">
-                            Color Titanium, space black
-                            Model A229, 12294, A2375 
+                        <?= $result['ProductMisc']; ?>
                         </div>
                     </div>
                     </br>
@@ -206,23 +212,7 @@
                     <div class="card bg-secondary text-light" style="width: 254px;">
                         <img src="jam.jpg" class="card-img-top" style="width:250px">
                         <div class="card-body">
-                            <h5 class="card-text">www.dinomarket.com</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-secondary text-light" style="width: 254px;">
-                        <img src="jam.jpg" class="card-img-top" style="width:250px">
-                        <div class="card-body">
-                            <h5 class="card-text">www.dinomarket.com</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card bg-secondary text-light" style="width: 254px;">
-                        <img src="jam.jpg" class="card-img-top" style="width:250px">
-                        <div class="card-body">
-                            <h5 class="card-text">www.dinomarket.com</h5>
+                            <h5 class="card-text"><?= $result['WhereToBuy']; ?></h5>
                         </div>
                     </div>
                 </div>

@@ -45,197 +45,236 @@
         <br>
 
         <!--Jenis gadget dan kegunaan utama-->
-        <div class="container">
-            <div class="row">
-                <div class="text-center">
-                    <h1>What kind of gadget do you want?</h1>
-                </div>
-                <p>
+                <!--Jenis gadget dan kegunaan utama-->
+                <form action="recommendation_member.php" method="post">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <h1>What kind of gadget do you want?</h1>
+                    </div>
+                    <p>
 
-                </p>
-                <p>
-                    
-                </p>
-                <div class="col-lg-4 me-auto"> <h6>What are you looking for?</h6></div>
-                <div class="col-lg-4 ms-auto"> <h6>What do you mainly use your gadget for?</h6></div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-            <div class="dropdown col-lg-4 me-auto">
-                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        Select gadget
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Smartphone</a></li>
-                        <li><a class="dropdown-item" href="#">Tablet</a></li>
-                        <li><a class="dropdown-item" href="#">Laptop</a></li>
-                        <li><a class="dropdown-item" href="#">Smart watch</a></li>
-                        <li><a class="dropdown-item" href="#">Headphones</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown col-lg-4 ms-auto">
-                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        What do you use the gadget for?
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Coding</a></li>
-                        <li><a class="dropdown-item" href="#">Drawing</a></li>
-                        <li><a class="dropdown-item" href="#">Doing homework</a></li>
-                        <li><a class="dropdown-item" href="#">Data processing</a></li>
-                    </ul>
+                    </p>
+                    <p>
+                        
+                    </p>
+                    <div class="col-lg-4 me-auto"> <h6>What are you looking for?</h6></div>
+                    <div class="col-lg-4 ms-auto"> <h6>What do you mainly use your gadget for?</h6></div>
                 </div>
             </div>
-        </div>
 
-        <br>
-        </br>
+            <div class="container">
+                <div class="row">
+                <div class="dropdown col-lg-4 me-auto">
+                        <select name="gadget">
+                            <option value="smartphone">Smartphone</option>
+                            <option value="tablet">Tablet</option>
+                            <option value="laptop">Laptop</option>
+                            <option value="smart_watch">Smart watch</option>
+                            <option value="headphones">Headphones</option>
+                        </select>
 
-        <!--Pekerjaan dan budget user-->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 me-auto"> <h6>What is your occupation?</h6></div>
-                <div class="col-lg-4 ms-auto"> <h6>How much is your budget?</h6></div>
-            </div>
-        </div>
+                        
 
-        <div class="container">
-            <div class="row">
-            <div class="dropdown col-lg-4 me-auto">
-                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        Select your occupation
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Businessman</a></li>
-                        <li><a class="dropdown-item" href="#">Employee</a></li>
-                        <li><a class="dropdown-item" href="#">Freelancer</a></li>
-                        <li><a class="dropdown-item" href="#">Programmer</a></li>
-                        <li><a class="dropdown-item" href="#">Student</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown col-lg-4 ms-auto">
-                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        Select Budget
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">≤ Rp5.000.000</a></li>
-                        <li><a class="dropdown-item" href="#">≤ Rp10.000.000</a></li>
-                        <li><a class="dropdown-item" href="#">≤ Rp20.000.000</a></li>
-                        <li><a class="dropdown-item" href="#">≤ Rp40.000.000</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <br>
-        </br>
 
-        <div class="container">
-            <div class="row">
-                <div class="text-center">
-                    <h1>Addition specifications</h1>
-                </div>
-                <p>P.s: This part is optional, but you can fill this part for better recommendation!</p>
-                <p>
 
-                </p>
-                <p>
-                    
-                </p>
-                <div class="col">
-                    <h6>RAM size (in GB)</h6>
-                </div>
-                <div class="col">
-                    <h6>Battery Size (in mAh)</h6>
-                </div>
-                <div class="col">
-                    <h6>Graphic Card</h6>
+                        <!-- <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Select gadget
+                        </button>
+                        <ul name="gadget" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                            <li><a class="dropdown-item" href="#">Tablet</a></li>
+                            <li><a class="dropdown-item" href="#">Laptop</a></li>
+                            <li><a class="dropdown-item" href="#">Smart watch</a></li>
+                            <li><a class="dropdown-item" href="#">Headphones</a></li>
+                        </ul> -->
+                    </div>
+                    <div class="dropdown col-lg-4 ms-auto">
+                        <select name="penggunaan">
+                            <option value="coding">Coding</option>
+                            <option value="drawing">Drawing</option>
+                            <option value="doing">Doing Homework</option>
+                            <option value="data">Data Processing</option>
+                            <option value="designing">Designing</option>
+                        </select>
+                        <!-- <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            What do you use the gadget for?
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Coding</a></li>
+                            <li><a class="dropdown-item" href="#">Drawing</a></li>
+                            <li><a class="dropdown-item" href="#">Doing homework</a></li>
+                            <li><a class="dropdown-item" href="#">Data processing</a></li>
+                        </ul> -->
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <form class="container">
-            <div class="row">
-                <div class="col-md">
-                    <input type="text" class="form-control">
+            <br>
+            </br>
+
+            <!--Pekerjaan dan budget user-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 me-auto"> <h6>What is your occupation?</h6></div>
+                    <div class="col-lg-4 ms-auto"> <h6>How much is your budget?</h6></div>
                 </div>
-                <div class="col-md">
-                    <input type="text" class="form-control">
+            </div>
+
+            <div class="container">
+                <div class="row">
+                <div class="dropdown col-lg-4 me-auto">
+                        <select name="pekerjaan">
+                            <option value="businessman">Businessman</option>
+                            <option value="employee">Employee</option>
+                            <option value="freelancer">Freelancer</option>
+                            <option value="programmer">Programmer</option>
+                            <option value="student">Student</option>
+                            <option value="designer">Designer</option>
+                        </select>
+                        <!-- <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Select your occupation
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Businessman</a></li>
+                            <li><a class="dropdown-item" href="#">Employee</a></li>
+                            <li><a class="dropdown-item" href="#">Freelancer</a></li>
+                            <li><a class="dropdown-item" href="#">Programmer</a></li>
+                            <li><a class="dropdown-item" href="#">Student</a></li>
+                        </ul> -->
+                    </div>
+                    <div class="dropdown col-lg-4 ms-auto">
+                        <select name="budget">
+                            <option value="5000000">≤ Rp5.000.000</option>
+                            <option value="10000000">≤ Rp10.000.000</option>
+                            <option value="20000000">≤ Rp20.000.000</option>
+                            <option value="40000000">≤ Rp40.000.000</option>
+                        </select>
+                        <!-- <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Select Budget
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">≤ Rp5.000.000</a></li>
+                            <li><a class="dropdown-item" href="#">≤ Rp10.000.000</a></li>
+                            <li><a class="dropdown-item" href="#">≤ Rp20.000.000</a></li>
+                            <li><a class="dropdown-item" href="#">≤ Rp40.000.000</a></li>
+                        </ul> -->
+                    </div>
                 </div>
-                <div class="col-md">
-                    <input type="text" class="form-control">
+            </div>
+
+            <br>
+            </br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <h1>Addition specifications</h1>
+                    </div>
+                    <p>P.s: This part is optional, but you can fill this part for better recommendation!</p>
+                    <p>
+
+                    </p>
+                    <p>
+                        
+                    </p>
+                    <div class="col">
+                        <h6>RAM size (in GB)</h6>
+                    </div>
+                    <div class="col">
+                        <h6>Battery Size (in mAh)</h6>
+                    </div>
+                    <div class="col">
+                        <h6>Graphic Card</h6>
+                    </div>
                 </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            </br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h6>Camera size (in MP)</h6>
+                    </div>
+                    <div class="col">
+                        <h6>External memory (y/n)</h6>
+                    </div>
+                    <div class="col">
+                        <h6>Operating system</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            </br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h6>Internal memory (in GB)</h6>
+                    </div>
+                    <div class="col">
+                        <h6>Screen size (in inch)</h6>
+                    </div>
+                    <div class="col">
+                        <h6>Brand</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            </br>
+            <div class="container text-center">
+                <button type="submit">Search</button>
+                <!-- <a button type="button" class="btn btn-primary btn-lg btn-info text-white" href="recommendation.php"> Search!</button> </a> -->
             </div>
         </form>
 
-        <br>
-        </br>
-
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h6>Camera size (in Pixel)</h6>
-                </div>
-                <div class="col">
-                    <h6>External memory (y/n)</h6>
-                </div>
-                <div class="col">
-                    <h6>Operating system</h6>
-                </div>
-            </div>
-        </div>
-
-        <form class="container">
-            <div class="row">
-                <div class="col-md">
-                    <input type="text" class="form-control">
-                </div>
-                <div class="col-md">
-                    <input type="text" class="form-control">
-                </div>
-                <div class="col-md">
-                    <input type="text" class="form-control">
-                </div>
-            </div>
-        </form>
-
-        <br>
-        </br>
-
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h6>Internal memory (in GB)</h6>
-                </div>
-                <div class="col">
-                    <h6>Screen size (in inch)</h6>
-                </div>
-                <div class="col">
-                    <h6>Brand</h6>
-                </div>
-            </div>
-        </div>
-
-        <form class="container">
-            <div class="row">
-                <div class="col-md">
-                    <input type="text" class="form-control">
-                </div>
-                <div class="col-md">
-                    <input type="text" class="form-control">
-                </div>
-                <div class="col-md">
-                    <input type="text" class="form-control">
-                </div>
-            </div>
-        </form>
-
-        <br>
-        </br>
-        <div class="container text-center">
-            <a button type="button" class="btn btn-primary btn-lg btn-info text-white" href="recommendation_member.php"> Search!</button> </a>
-        </div>
 
         <br>
         </br>

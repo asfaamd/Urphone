@@ -1,3 +1,17 @@
+<?php
+    include("be_connect.php");
+    $DB = new Database();
+
+$gadget = $_POST['gadget'];
+$penggunaan = $_POST['penggunaan'];
+$pekerjaan = $_POST['pekerjaan'];
+$budget = $_POST['budget'];
+
+// $query = "SELECT * FROM product";
+    $query = "SELECT * FROM product WHERE ProductPrice<=" . $budget . " AND WhatFor='" . $penggunaan . "' AND WhatOccupation='" . $pekerjaan . "' AND WhatGadget='" . $gadget . "'";
+    $result = $DB->read($query);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -45,6 +59,7 @@
         <br>
 
         <!--Title-->
+        <!--Title-->
         <div class="container">
             <div class="row">
                 <div class="text-center">
@@ -53,37 +68,49 @@
             </div>
             <br>
             <!--Recommendation lists-->
+            <?php
+            if ($result){
+
+            
+            foreach ($result as $gadget) { ?>
             <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:210px">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Apple Watch Series 6</h5>
-                            <p><h7 class="card-text">Rp2.000.000</h7>
-                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
-                            <p><a href="catalog_member.php" class="btn btn- btn-info text-light">Read More</a>
-                        </div>
-                    </div>
+            <div class="row g-0">
+                <div class="col-md-4" style="max-width:210px">
+                    <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
                 </div>
-            </div>
-            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:210px">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Apple Watch Series 6</h5>
-                            <p><h7 class="card-text">Rp2.000.000</h7>
-                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
-                            <p><a href="catalog_member.php" class="btn btn- btn-info text-light">Read More</a>
-                        </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $gadget['ProductTitle']; ?></h5>
+                        <p><h7 class="card-text"><?= $gadget['ProductPrice']; ?></h7>
+                        <p><a href="catalog_member.php?id=<?= $gadget['Product_ID']; ?>" class="btn btn- btn-info text-light">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
+           <?php }} else { ?>
+            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                <p>Data tidak ditemukan</p>
+            </div>
+            <?php
+           }
+            ?>
+            
+            <!-- <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                <div class="row g-0">
+                    <div class="col-md-4" style="max-width:210px">
+                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple Watch Series 6</h5>
+                            <p><h7 class="card-text">Rp2.000.000</h7>
+                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
+                            <p><a href="catalog.php" class="btn btn- btn-info text-light">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
 
         <div class="container">
             <div class="row text-center">
@@ -95,6 +122,7 @@
                 </div>            
             </div>
         </div>
+
 
         
         <br>

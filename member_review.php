@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    include("be_connect.php");
+    $DB = new Database();
+    $id_produk = $_GET['id'];
+    $query = "SELECT * FROM review WHERE Product_ID='" . $id_produk . "'";
+    $hasil = $DB->read($query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -50,41 +59,21 @@
             </div>
             <br>
             <!--Recommendation lists-->
-            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:210px">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Apple Watch Series 6</h5>
-                            <p>"Jamnya keren banget wow wow wow" 
-                            <br> rating 4/5
-                            <br><h7 class="card-text text-muted">Ahmad Samarinda</h7>
-                            <p><a href="#" class="btn btn- btn-info text-light">View Product</a>
+            <?php foreach ($hasil as $review) { ?>
+            </br>
+            <div class="card bg-secondary text-light">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h6 class="text-info"><?= $review['UserName'];?></h6>
                         </div>
                     </div>
+                    <p><?= $review['Comment'];?></p>
+                    <p><?= $review['Star'];?>/5 rating</p>
                 </div>
             </div>
-            <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:210px">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Apple Watch Series 6</h5>
-                            <p>"Jamnya keren banget wow wow wow" 
-                            <br> rating 4/5
-                            <br><h7 class="card-text text-muted">Ahmad Samarinda</h7>
-                            <p><a href="#" class="btn btn- btn-info text-light">View Product</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+            <?php }?>
         </div>
-
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
