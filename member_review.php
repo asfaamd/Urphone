@@ -49,7 +49,6 @@
 
         <br></br>
         <br></br>
-        <br></br>
         <!--Title-->
         <div class="container">
             <div class="row">
@@ -64,6 +63,10 @@
             <div class="card bg-secondary text-light">
                 <div class="card-body">
                     <div class="row">
+                    <div class="col-lg-4">
+                            <h6 class="text-info"><?= $review['ProductTitle'];?></h6>
+                        </div>
+                        </p>
                         <div class="col-lg-4">
                             <h6 class="text-info"><?= $review['UserName'];?></h6>
                         </div>
@@ -74,6 +77,10 @@
             </div>
             <?php }?>
         </div>
+
+        <p></p>
+        <p></p>
+        <p></p>
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">

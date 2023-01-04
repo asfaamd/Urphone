@@ -5,6 +5,7 @@
     $id_produk = $_GET['id'];
     $query = "SELECT * FROM product WHERE Product_ID='" . $id_produk . "'";
     $result = $DB->read($query)[0];
+    $prod_title = $result['ProductTitle'];
     $query = "SELECT * FROM review WHERE Product_ID='" . $id_produk . "'";
     $hasil = $DB->read($query);
 ?>
@@ -68,7 +69,7 @@
                             </br>
                             <h4>Like this product?</h4>
                             </br>
-                            <a href="#" button class="btn btn-primary btn-info text-white btn-lg">Add to wishlist</button> </a>
+                            <a href="wishlist_member.php?id=<?= $result['Product_ID']; ?>" button class="btn btn-primary btn-info text-white btn-lg">Add to wishlist</button> </a>
                         </div>
                     </div>
                 </div>
@@ -271,7 +272,8 @@
                 $star = $_POST['star'];
                 $member_id = $_SESSION['urphone_MemberID'];
                 $prod_id = $_GET['id'];
-                $query = "INSERT INTO review(UserName, Comment, Star, MemberID, Product_ID) VALUES ('" . $username . "', '" . $comment . "', " . $star . ", " . $member_id . ", " . $prod_id . ")";
+                
+                $query = "INSERT INTO review(UserName, Comment, Star, MemberID, Product_ID, ProductTitle) VALUES ('" . $username . "', '" . $comment . "', " . $star . ", " . $member_id . ", " . $prod_id . ", '" . $prod_title ."')";
                 $result = $DB->save($query);
                 if($result) {
                 $tes = "berhasil";
