@@ -65,18 +65,13 @@
             <div class="container">
                 <div class="row">
                 <div class="dropdown col-lg-4 me-auto">
-                        <select name="gadget">
+                        <select name="gadget" class="btn btn-secondary btn-lg dropdown-toggle">>
                             <option value="smartphone">Smartphone</option>
                             <option value="tablet">Tablet</option>
                             <option value="laptop">Laptop</option>
                             <option value="smart_watch">Smart watch</option>
                             <option value="headphones">Headphones</option>
                         </select>
-
-                        
-
-
-
 
                         <!-- <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             Select gadget
@@ -90,7 +85,7 @@
                         </ul> -->
                     </div>
                     <div class="dropdown col-lg-4 ms-auto">
-                        <select name="penggunaan">
+                        <select name="penggunaan" class="btn btn-secondary btn-lg dropdown-toggle">
                             <option value="coding">Coding</option>
                             <option value="drawing">Drawing</option>
                             <option value="doing">Doing Homework</option>
@@ -124,7 +119,7 @@
             <div class="container">
                 <div class="row">
                 <div class="dropdown col-lg-4 me-auto">
-                        <select name="pekerjaan">
+                        <select name="pekerjaan" class="btn btn-secondary btn-lg dropdown-toggle">
                             <option value="businessman">Businessman</option>
                             <option value="employee">Employee</option>
                             <option value="freelancer">Freelancer</option>
@@ -144,7 +139,7 @@
                         </ul> -->
                     </div>
                     <div class="dropdown col-lg-4 ms-auto">
-                        <select name="budget">
+                        <select name="budget" class="btn btn-secondary btn-lg dropdown-toggle">
                             <option value="5000000">≤ Rp5.000.000</option>
                             <option value="10000000">≤ Rp10.000.000</option>
                             <option value="20000000">≤ Rp20.000.000</option>
@@ -269,7 +264,7 @@
             <br>
             </br>
             <div class="container text-center">
-                <button type="submit">Search</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-info text-white">Search</button>
                 <!-- <a button type="button" class="btn btn-primary btn-lg btn-info text-white" href="recommendation.php"> Search!</button> </a> -->
             </div>
         </form>

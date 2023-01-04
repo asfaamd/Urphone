@@ -59,7 +59,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-6">
-                    <img src="jam.jpg" width="250px">
+                    <img src="assets/img/<?php echo $result['ProductPicture']; ?>" width="250px">
                 </div>
                 <div class="col-md-6">
                     <h2 class="text-center text-secondary"><?= $result['ProductTitle']; ?></h2>
@@ -215,7 +215,7 @@
             <div class="row">
                 <div class="col">
                     <div class="card bg-secondary text-light" style="width: 254px;">
-                        <img src="jam.jpg" class="card-img-top" style="width:250px">
+                        <img src="assets/img/<?php echo $result['ProductPicture'];?>" class="card-img-top" style="width:250px">
                         <div class="card-body">
                             <h5 class="card-text"><?= $result['WhereToBuy']; ?></h5>
                         </div>
@@ -228,10 +228,9 @@
         
         
         <!--User reviews-->
-
+        <div class="container">
+        <h2 class="text-secondary">User reviews</h2>
         <?php foreach ($hasil as $review) { ?>
-            <div class="container">
-            <h2 class="text-secondary">User reviews</h2>
             </br>
             <div class="card bg-secondary text-light">
                 <div class="card-body">
@@ -244,8 +243,8 @@
                     <p><?= $review['Star'];?>/5 rating</p>
                 </div>
             </div>
-            </div>
         <?php }?>
+        </div>
 
         </div>
 
@@ -254,11 +253,14 @@
         
         ?>
         <!--User review-->
+        <div class="container">
+            <h2 class="text-secondary">Write your review!</h2>
+        </div>
         <?php
 
             $comment="";
             $star = "";
-        $tes = "";
+            //$tes = "";
             $DB = new Database();
 
 
@@ -275,17 +277,16 @@
                 
                 $query = "INSERT INTO review(UserName, Comment, Star, MemberID, Product_ID, ProductTitle) VALUES ('" . $username . "', '" . $comment . "', " . $star . ", " . $member_id . ", " . $prod_id . ", '" . $prod_title ."')";
                 $result = $DB->save($query);
-                if($result) {
-                $tes = "berhasil";
-                } else {
-                $tes = "gagal";
-                }
+                // if($result) {
+                // $tes = "berhasil";
+                // } else {
+                // $tes = "gagal";
+                // }
             }
 
 ?>
         <form action="catalog_member.php?id=<?= $_GET['id']; ?>" method="post">
             <div class="container">
-                <h2 class="text-secondary"><?= $tes ?></h2>
                 </br>
                 <div class="form-group">
                     <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -296,17 +297,18 @@
                 <div class="dropdown col-lg-4 me-auto">
                     <!-- <a href="#" button class="btn btn-primary btn-info text-white btn-lg text-center">Send</button> </a>
                     </div> -->
-                    <div class="dropdown col-lg-4 ms-auto">
+                    <div class="dropdown col-lg-4 me-auto">
                         <!-- <button class="btn btn-info text-light btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             Rating
                         </button> -->
-                        <select name="star">
+                        <select name="star" class="btn btn-secondary text-light btn-lg dropdown-toggle">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
+                        <br></br>
                         <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a value="1" class="dropdown-item" href="#">1</a></li>
                             <li><a value= "2" class="dropdown-item" href="#">2</a></li>
@@ -318,7 +320,9 @@
                 </div>
             </div>
             </div>
-            <button type="submit">Send</button>
+            <div class="container text-center">
+                <button type="submit" class="btn btn-primary btn-secondary text-light btn-xl">Send</button>
+            </div>
         </form>
 
         <br></br>

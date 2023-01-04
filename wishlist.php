@@ -69,7 +69,7 @@ $res = $DB->read($query);
             <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
                 <div class="row g-0">
                     <div class="col-md-4" style="max-width:210px">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                        <img src="assets/img/<?php echo $wish['ProductPicture']; ?>" class="img-fluid rounded-start" alt="Ini gambar">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -105,8 +105,6 @@ $res = $DB->read($query);
         <br>
         </br>
 
-
-        
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
@@ -149,3 +147,4 @@ $res = $DB->read($query);
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
+

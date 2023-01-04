@@ -76,7 +76,7 @@ $budget = $_POST['budget'];
             <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
             <div class="row g-0">
                 <div class="col-md-4" style="max-width:210px">
-                    <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
+                    <img src="assets/img/<?php echo $gadget['ProductPicture']; ?>" class="img-fluid rounded-start" alt="Ini gambar">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -89,6 +89,7 @@ $budget = $_POST['budget'];
         </div>
            <?php }} else { ?>
             <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
+                <br>
                 <p>Data tidak ditemukan</p>
             </div>
             <?php
@@ -116,10 +117,7 @@ $budget = $_POST['budget'];
             <div class="row text-center">
                 <div class="col">
                     <a href="member_find_gadget.php" button class="btn btn-primary btn-info text-white btn-xl">Go back</button> </a>
-                </div>
-                <div class="col">
-                        <a href="#" button class="btn btn-primary btn-info text-white btn-xl">Click for more</button> </a>
-                </div>            
+                </div>          
             </div>
         </div>
 

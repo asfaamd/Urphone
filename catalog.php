@@ -54,7 +54,7 @@ $result = $DB->read($query)[0];
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-6">
-                    <img src="jam.jpg" width="250px">
+                    <img src="assets/img/<?php echo $result['ProductPicture']; ?>" width="250px">
                 </div>
                 <div class="col-md-6">
                     <h2 class="text-center text-secondary"><?= $result['ProductTitle']; ?></h2>
@@ -64,7 +64,7 @@ $result = $DB->read($query)[0];
                             </br>
                             <h4>Like this product?</h4>
                             </br>
-                            <a href="#" button class="btn btn-primary btn-info text-white btn-lg">Add to wishlist</button> </a>
+                            <a href="login.php" button class="btn btn-primary btn-info text-white btn-lg">Add to wishlist</button> </a>
                         </div>
                     </div>
                 </div>
@@ -210,7 +210,7 @@ $result = $DB->read($query)[0];
             <div class="row">
                 <div class="col">
                     <div class="card bg-secondary text-light" style="width: 254px;">
-                        <img src="jam.jpg" class="card-img-top" style="width:250px">
+                        <img src="assets/img/<?php echo $result['ProductPicture']; ?>" class="card-img-top" style="width:250px">
                         <div class="card-body">
                             <h5 class="card-text"><?= $result['WhereToBuy']; ?></h5>
                         </div>
