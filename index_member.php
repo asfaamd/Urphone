@@ -1,6 +1,15 @@
 <?php
+    //session_start();
+    include("be_connect.php");
+    $DB = new Database();
+    $id_produk = $_GET['id'];
+    $query = "SELECT * FROM review WHERE Product_ID='" . $id_produk . "' LIMIT 2";
+    $hasil = $DB->read($query);
+?>
+
+<?php
     session_start();
-    print_r($_SESSION);
+    //print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -68,30 +77,30 @@
                 <br>
                 </br>
 
-                <div class="ms-auto">
-                    <p class="lead">
-                        <h4 class="text-info">Samsung Z Flip</h4>
-                        Lorem ipsum, dolor sit amet consectetur 
-                        adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
-                        error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
-                        Cumque.
-                    </p>
-                    <p class="text-muted">Ini nama user</p>
-                </div>
+                <?php
+                    if ($hasil) {
+                        foreach ($hasil as $review) {
+                        ?>
+                    </br>
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body">
+                            <div class="row">
+                            <div class="col-lg-4">
+                                    <h6 class="text-info"><?= $review['ProductTitle']; ?></h6>
+                                </div>
+                                </p>
+                                <div class="col-lg-4">
+                                    <h6 class="text-info"><?= $review['UserName']; ?></h6>
+                                </div>
+                            </div>
+                            <p><?= $review['Comment']; ?></p>
+                            <p><?= $review['Star']; ?>/5 rating</p>
+                        </div>
+                    </div>
+                <?php }
+                }?>
 
-                <br>
-                </br>
-
-                <div class="ms-auto">
-                    <p class="lead">
-                        <h4 class="text-info">Samsung Watch</h4>
-                        Lorem ipsum, dolor sit amet consectetur 
-                        adipisicing elit. Ea, reprehenderit odit similique mollitia neque atque nostrum facere, 
-                        error pariatur doloribus exercitationem ratione illum itaque quis natus animi expedita non! 
-                        Cumque.
-                    </p>
-                    <p class="text-muted">Sebut saja Fulan</p>
-                </div>
+                <br></br>
 
                 <div class="text-center">
                     <a href="member_review.php" class="btn btn-primary btn-info text-light">Click for more review!</a>
@@ -100,8 +109,8 @@
         </section>
         <!-- About Section-->
         <?php
-            include("be_connect.php");
-            $DB = new Database();
+            // include("be_connect.php");
+            // $DB = new Database();
             $query = "SELECT * FROM article ORDER BY ArticleID DESC LIMIT 2";
             $result = $DB->read($query);
         ?>

@@ -62,10 +62,13 @@ $res = $DB->read($query);
             <br>
             <!--Recommendation lists-->
             
-            <?php foreach ($res as $item) { 
-                $query = "SELECT * FROM product WHERE Product_ID=" . $item['Product_ID'];
-                $wish = $DB->read($query)[0];
-            ?>
+            
+            <?php
+            if ($res) {
+                foreach ($res as $item) {
+                    $query = "SELECT * FROM product WHERE Product_ID=" . $item['Product_ID'];
+                    $wish = $DB->read($query)[0];
+                    ?>
             <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
                 <div class="row g-0">
                     <div class="col-md-4" style="max-width:210px">
@@ -81,8 +84,9 @@ $res = $DB->read($query);
                     </div>
                 </div>
             </div>    
-            <?php } ?>
-            
+            <?php }
+            } ?>
+            </div>
             
             <!-- <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
                 <div class="row g-0">

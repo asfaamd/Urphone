@@ -93,12 +93,13 @@
         <br></br>
         <?php
             if(!isset($_GET)){ ?>
-                <form action="admin_input_article.php" method="post" enctype="multipart/form-data">
+                <form action="admin_input_article.php" method="POST" enctype="multipart/form-data">
             <?php
             } else{?>
-                <form action="admin_input_article.php?article=<?php echo $_GET['article'];?>" method="post" enctype="multipart/form-data">
+                <form action = "admin_input_article.php?article= <?php echo $_GET['article'];?>" method="POST" enctype="multipart/form-data">
             <?php }
         ?>
+
             <div class="container">
                 <h1 class="text-secondary">Insert Article</h1>
                 <div class="row">
