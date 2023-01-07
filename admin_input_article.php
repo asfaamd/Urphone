@@ -92,7 +92,7 @@
         
         <br></br>
         <?php
-            if(!isset($_GET)){ ?>
+            if(!isset($_GET['article'])){ ?>
                 <form action="admin_input_article.php" method="POST" enctype="multipart/form-data">
             <?php
             } else{?>
