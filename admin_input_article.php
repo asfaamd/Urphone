@@ -9,33 +9,43 @@
     $content = "";
     $summary = "";
     $picture = "";
+    $query = "";
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-        $article_input = new Articles_Input();
-        $result = $article_input->evaluate($_POST);
-
-        if($result == ""){
-            header("Location: admin_articles.php", true, 301);
-            exit();
-        } else{
-            echo $result;
-        }
-        // $email = $_POST['email'];
-        // $password = $_POST['password'];
-        
         $title = $_POST['title'];
         $source = $_POST['source'];
         $content = $_POST['content'];
         $summary = $_POST['summary'];
         $picture = $_POST['name'];
+        if(isset($_GET)){
+            $id = $_GET['article'];
+            $query = "UPDATE article SET ArticleTitle= '".$title."', ArticleContent='".$content.
+            "', ArticleSource= '".$source."', ArticleSummary ='".$summary."' WHERE ArticleID=".$id;
+            $DB = new Database();
+            $result = $DB->save($query);
+            header("Location: admin_articles.php", true, 301);
+        } else{
+            $article_input = new Articles_Input();
+            $result = $article_input->evaluate($_POST);
+
+            if($result == ""){
+                header("Location: admin_articles.php", true, 301);
+                exit();
+            } else{
+                echo $result;
+            }
+            // $email = $_POST['email'];
+            // $password = $_POST['password'];
+        
+        }
+
     }
     
-    if (isset($_GET)){
-    $id = $_GET['article'];
-    $DB = new Database();
-    $query = "SELECT * FROM article WHERE ArticleID=$id";
-    $result = $DB->read($query)[0];
+    if (isset($_GET) && $_SERVER['REQUEST_METHOD']=='GET'){
+        $id = $_GET['article'];
+        $DB = new Database();
+        $query = "SELECT * FROM article WHERE ArticleID=$id";
+        $result = $DB->read($query)[0];
     }
 
 ?>
@@ -59,6 +69,7 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+        <p><?php echo $query;?></p>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
             <div class="container">
@@ -80,8 +91,14 @@
         </nav>
         
         <br></br>
-
-        <form action="admin_input_article.php" method="post" enctype="multipart/form-data">
+        <?php
+            if(!isset($_GET)){ ?>
+                <form action="admin_input_article.php" method="post" enctype="multipart/form-data">
+            <?php
+            } else{?>
+                <form action="admin_input_article.php?article=<?php echo $_GET['article'];?>" method="post" enctype="multipart/form-data">
+            <?php }
+        ?>
             <div class="container">
                 <h1 class="text-secondary">Insert Article</h1>
                 <div class="row">
@@ -124,7 +141,11 @@
                     
                 </div>
                 <div class="text-center">
-                    <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit">
+                    <?php if (isset($_GET)) { ?>
+                        <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit" value="update">
+                    <?php }else{ ?>
+                        <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit" value="submit">
+                    <?php } ?>
                     <!-- <a href="#.php" button class="btn btn-primary btn-lg btn-info text-light">Save changes</button> </a> -->
                 </div>
             </div>

@@ -58,24 +58,28 @@
             </div>
             <br>
             <!--Recommendation lists-->
-            <?php foreach ($hasil as $review) { ?>
+            <?php
+            if ($hasil) {
+                foreach ($hasil as $review) {
+                ?>
             </br>
             <div class="card bg-secondary text-light">
                 <div class="card-body">
                     <div class="row">
                     <div class="col-lg-4">
-                            <h6 class="text-info"><?= $review['ProductTitle'];?></h6>
+                            <h6 class="text-info"><?= $review['ProductTitle']; ?></h6>
                         </div>
                         </p>
                         <div class="col-lg-4">
-                            <h6 class="text-info"><?= $review['UserName'];?></h6>
+                            <h6 class="text-info"><?= $review['UserName']; ?></h6>
                         </div>
                     </div>
-                    <p><?= $review['Comment'];?></p>
-                    <p><?= $review['Star'];?>/5 rating</p>
+                    <p><?= $review['Comment']; ?></p>
+                    <p><?= $review['Star']; ?>/5 rating</p>
                 </div>
             </div>
-            <?php }?>
+            <?php }
+            }?>
         </div>
 
         <p></p>

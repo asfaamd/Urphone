@@ -1,5 +1,6 @@
 <?php
 include("be_connect.php");
+#include("delete_product");
 $DB = new Database();
 $query = "SELECT * FROM product ORDER BY Product_ID DESC";
 $result = $DB->read($query);
@@ -60,7 +61,9 @@ $result = $DB->read($query);
             <br>
 
             <!--Recommendation lists-->
-            <?php foreach ($result as $product) { ?>
+            <?php
+            if ($result) {
+                foreach ($result as $product) { ?>
                 <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
                     <div class="row g-0">
                         <div class="col-md-4" style="max-width:210px">
@@ -71,11 +74,14 @@ $result = $DB->read($query);
                                 <h5 class="card-title"><?php echo $product['ProductTitle']; ?></h5>
                                 <p><h7 class="card-text">Rp<?php echo $product['ProductPrice']; ?></h7>
                                 <p><a href="admin_catalog_page.php?product=<?php echo $product['Product_ID']; ?>" class="btn btn-primary btn-info text-light">Read More</a>
+                                <a href="admin_input_gadget.php?product=<?php echo $product['Product_ID']; ?>" class="btn btn-primary btn-info text-light">Update</a>
+                                <a href="delete_product.php?product=<?php echo $product['Product_ID']; ?>" class="btn btn-primary btn-info text-light">Delete</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+            <?php }
+            } ?>
         </div>
 
         

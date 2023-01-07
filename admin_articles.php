@@ -1,5 +1,6 @@
 <?php
 include("be_connect.php");
+
 $DB = new Database();
 $query = "SELECT * FROM article ORDER BY ArticleID DESC";
 $result = $DB->read($query);
@@ -63,8 +64,8 @@ $result = $DB->read($query);
                                 <p class="card-text"><?php echo $article['ArticleSummary']; ?></p>
                                 <p class="card-text text-muted"><?php echo $article['ArticleSource']; ?></p>
                                 <a href="admin_article_page.php?article=<?php echo $article['ArticleID']; ?>" class="btn btn-primary btn-info text-light">Read More</a>
-                                <a href="admin_article_page.php?article=<?php echo $article['ArticleID']; ?>" class="btn btn-primary btn-secondary btn-outline-light text-light">Update</a>
-                                <a href="admin_articles.php?article=<?= $article['ArticleID']; ?>" class="btn btn-primary btn-danger text-light">Delete</a>
+                                <a href="admin_input_article.php?article=<?php echo $article['ArticleID']; ?>" class="btn btn-primary btn-secondary btn-outline-light text-light">Update</a>
+                                <a href="delete_article.php?article=<?php echo $article['ArticleID']; ?>" class="btn btn-primary btn-danger text-light">Delete</a>
                             </div>
                         </div>
                     </div>

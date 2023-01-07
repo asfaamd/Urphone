@@ -28,26 +28,10 @@
     $wheretobuy = "";
     $brand = "";
     $picture = "";
+    $query = "";
     
-
+    
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-        $catalog_input = new Catalog_Input();
-        $result = $catalog_input->evaluate($_POST);
-
-        if($result == ""){
-            header("Location: admin_gadget_catalog.php", true, 301);
-            exit();
-        } else{
-            echo $result;
-        }
-        
-        // $title = $_POST['title'];
-        // $source = $_POST['source'];
-        // $content = $_POST['content'];
-        // $summary = $_POST['summary'];
-        // $picture = $_POST['name'];
-        
         $producttitle = $_POST['producttitle'];
         $price = $_POST['price'];
         $network = $_POST['network'];
@@ -72,12 +56,47 @@
         $wheretobuy = $_POST['wheretobuy'];
         $brand = $_POST['brand'];
         $picture = $_POST['name'];
+
+        if (isset($_GET)) {
+            $id = $_GET['product'];
+            $query = "UPDATE product SET ProductPrice=".$price.",ProductNetwork='".$network."',ProductLaunch='".$launch."',
+            ProductBody='".$body."',ProductDisplay='".$display."',ProductPlatform ='".$platform."',
+            ProductInternalMemory=".$internalmemory.",ProductCamera=".$camera.",ProductSound='".$sound."',
+            ProductComms='".$comms."',ProductFeature='".$feature."',ProductBattery='".$battery."',
+            ProductMisc='".$misc."',WhereToBuy='".$wheretobuy."',ProductRAM=".$ram.",
+            ProductOS='".$os."',ProductGPU='".$gpu."',ProductTitle='".$producttitle."',
+            ProductBrand='".$brand."',ProductExternalMemory='".$externalmemory."',WhatGadget='".$whatgadget."',
+            WhatOccupation='".$whatoccupation."',WhatFor='".$whatfor."' WHERE Product_ID=".$id;
+            $DB = new Database();
+            $result = $DB->save($query);
+            if ($result) {
+                header("Location: admin_gadget_catalog.php", true, 301);
+            } else {
+                echo $query;
+            }
+        } else {
+            $catalog_input = new Catalog_Input();
+            $result = $catalog_input->evaluate($_POST);
+            if($result == ""){
+                header("Location: admin_gadget_catalog.php", true, 301);
+                exit();
+            } else{
+                echo $result;
+            }
+        }
+        
+        // $title = $_POST['title'];
+        // $source = $_POST['source'];
+        // $content = $_POST['content'];
+        // $summary = $_POST['summary'];
+        // $picture = $_POST['name'];
+        
     }
     
     if (isset($_GET)){
     $id = $_GET['product'];
     $DB = new Database();
-    $query = "SELECT * FROM product WHERE ProductID=$id";
+    $query = "SELECT * FROM product WHERE Product_ID=$id";
     $result = $DB->read($query)[0];
     }
 
@@ -123,9 +142,16 @@
         </nav>
 
         <br></br>
+        <?php
+        if (!isset($_GET)) { ?>
+            <form action="admin_input_gadget.php" method="post" enctype="multipart/form-data">
+        <?php
+        } else { ?>
+            <form action="admin_input_gadget.php?product=<?php echo $_GET['product']; ?>" method="post" enctype="multipart/form-data">
+        <?php }
+        ?>
         
         <!--form untuk input gadget-->
-        <form action="admin_input_gadget.php" method="post" enctype="multipart/form-data">
             <div class="container">
                 <h1 class="text-secondary">Insert gadget catalog</h1>
                 <div class="row">
@@ -339,7 +365,11 @@
                 </div>
                 <br></br>
                 <div class="text-center">
-                    <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit">
+                    <?php if(isset($_GET)) { ?>
+                        <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit" value="update">
+                    <?php }else{ ?>
+                        <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit" value="submit">
+                    <?php } ?>
                     <!-- <a href="#.php" button class="btn btn-primary btn-lg btn-info text-light">Save changes</button> </a> -->
                 </div>
             </div>

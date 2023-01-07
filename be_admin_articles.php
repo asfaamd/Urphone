@@ -47,10 +47,6 @@ class Articles_Input
         }
     }
 
-    public function delete_article($data){
-        
-    }
-
     
 }
 
