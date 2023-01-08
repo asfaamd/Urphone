@@ -71,6 +71,7 @@ $result = $DB->read($query);
                     </div>
                 </div>
             <?php } ?>
+            </div>
             
 
         <!-- Footer-->

@@ -18,7 +18,7 @@
         $summary = $_POST['summary'];
         $picture = $_POST['name'];
         if (isset($_GET)) {
-            $id = $_GET['id'];
+            $id = $_GET['article'];
             $query = "UPDATE article SET ArticleTitle= '" . $title . "', ArticleContent='" . $content .
                 "', ArticleSource= '" . $source . "', ArticleSummary ='" . $summary . "' WHERE ArticleID=" . $id;
             $DB = new Database();
@@ -40,9 +40,9 @@
     }
     
     if (isset($_GET) && $_SERVER['REQUEST_METHOD']=='GET'){
-        $id = $_GET['articleid'];
+        $id = $_GET['article'];
         $DB = new Database();
-        $query = "SELECT * FROM article WHERE ArticleID=$id";
+        $query = "SELECT * FROM article WHERE ArticleID=".$id;
         $result = $DB->read($query)[0];
     }
 
@@ -88,6 +88,7 @@
             </div>
         </nav>
         
+        <br></br>
         <br></br>
         <?php
             if(!isset($_GET['article'])){ ?>
