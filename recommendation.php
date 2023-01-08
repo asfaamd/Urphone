@@ -93,6 +93,7 @@ $budget = $_POST['budget'];
             <?php
            }
             ?>
+        </div>
             
             <!-- <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
                 <div class="row g-0">

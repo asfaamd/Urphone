@@ -12,19 +12,25 @@
     $query = "";
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $title = $_POST['title'];
-        $source = $_POST['source'];
-        $content = $_POST['content'];
-        $summary = $_POST['summary'];
-        $picture = $_POST['name'];
-        if (isset($_GET)) {
+        if ($_GET) {
+            $title = $_POST['title'];
+            $source = $_POST['source'];
+            $content = $_POST['content'];
+            $summary = $_POST['summary'];
             $id = $_GET['article'];
             $query = "UPDATE article SET ArticleTitle= '" . $title . "', ArticleContent='" . $content .
                 "', ArticleSource= '" . $source . "', ArticleSummary ='" . $summary . "' WHERE ArticleID=" . $id;
             $DB = new Database();
             $result = $DB->save($query);
-            header("Location: admin_articles.php", true, 301);
+            if($result) {
+                header("Location: admin_articles.php", true, 301);
+            }
         } else {
+            $title = $_POST['title'];
+            $source = $_POST['source'];
+            $content = $_POST['content'];
+            $summary = $_POST['summary'];
+            $picture = $_POST['picture'];
             $article_input = new Articles_Input();
             $result = $article_input->evaluate($_POST);
 
@@ -39,10 +45,10 @@
         }
     }
     
-    if (isset($_GET) && $_SERVER['REQUEST_METHOD']=='GET'){
+    if ($_GET && $_SERVER['REQUEST_METHOD']=='GET'){
         $id = $_GET['article'];
         $DB = new Database();
-        $query = "SELECT * FROM article WHERE ArticleID=".$id;
+        $query = "SELECT * FROM article WHERE ArticleID=$id";
         $result = $DB->read($query)[0];
     }
 
@@ -67,7 +73,6 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <p><?php echo $query;?></p>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-info text-uppercase fixed-top" id="mainNav">
             <div class="container">
@@ -90,12 +95,13 @@
         
         <br></br>
         <br></br>
+        <br>
         <?php
             if(!isset($_GET['article'])){ ?>
                 <form action="admin_input_article.php" method="POST" enctype="multipart/form-data">
             <?php
             } else{?>
-                <form action = "admin_input_article.php?article= <?php echo $_GET['article'];?>" method="POST" enctype="multipart/form-data">
+                <form action = "admin_input_article.php?article=<?php echo $_GET['article'];?>" method="POST" enctype="multipart/form-data">
             <?php }
         ?>
 
@@ -141,7 +147,7 @@
                     
                 </div>
                 <div class="text-center">
-                    <?php if (isset($_GET)) { ?>
+                    <?php if ($_GET) { ?>
                         <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit" value="update">
                     <?php }else{ ?>
                         <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit" value="submit">

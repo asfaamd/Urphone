@@ -30,34 +30,32 @@
     $picture = "";
     $query = "";
     
-    
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $producttitle = $_POST['producttitle'];
-        $price = $_POST['price'];
-        $network = $_POST['network'];
-        $launch = $_POST['launch'];
-        $body = $_POST['body'];
-        $display = $_POST['display'];
-        $platform = $_POST['platform'];
-        $internalmemory = $_POST['internalmemory'];
-        $camera = $_POST['camera'];
-        $sound = $_POST['sound'];
-        $comms = $_POST['comms'];
-        $feature = $_POST['feature'];
-        $battery = $_POST['battery'];
-        $misc = $_POST['misc'];
-        $ram = $_POST['ram'];
-        $externalmemory = $_POST['externalmemory'];
-        $os = $_POST['os'];
-        $gpu = $_POST['gpu'];
-        $whatgadget = $_POST['whatgadget'];
-        $whatoccupation = $_POST['whatoccupation'];
-        $whatfor = $_POST['whatfor'];
-        $wheretobuy = $_POST['wheretobuy'];
-        $brand = $_POST['brand'];
-        $picture = $_POST['name'];
-
-        if (isset($_GET)) {
+        if($_GET){
+            $producttitle = $_POST['producttitle'];
+            $price = $_POST['price'];
+            $network = $_POST['network'];
+            $launch = $_POST['launch'];
+            $body = $_POST['body'];
+            $display = $_POST['display'];
+            $platform = $_POST['platform'];
+            $internalmemory = $_POST['internalmemory'];
+            $camera = $_POST['camera'];
+            $sound = $_POST['sound'];
+            $comms = $_POST['comms'];
+            $feature = $_POST['feature'];
+            $battery = $_POST['battery'];
+            $misc = $_POST['misc'];
+            $ram = $_POST['ram'];
+            $externalmemory = $_POST['externalmemory'];
+            $os = $_POST['os'];
+            $gpu = $_POST['gpu'];
+            $whatgadget = $_POST['whatgadget'];
+            $whatoccupation = $_POST['whatoccupation'];
+            $whatfor = $_POST['whatfor'];
+            $wheretobuy = $_POST['wheretobuy'];
+            $brand = $_POST['brand'];
+            //$picture = $_POST['name'];
             $id = $_GET['product'];
             $query = "UPDATE product SET ProductPrice=".$price.",ProductNetwork='".$network."',ProductLaunch='".$launch."',
             ProductBody='".$body."',ProductDisplay='".$display."',ProductPlatform ='".$platform."',
@@ -69,22 +67,44 @@
             WhatOccupation='".$whatoccupation."',WhatFor='".$whatfor."' WHERE Product_ID=".$id;
             $DB = new Database();
             $result = $DB->save($query);
-            if ($result) {
+            if($result){
                 header("Location: admin_gadget_catalog.php", true, 301);
-            } else {
-                echo $query;
             }
         } else {
+            $producttitle = $_POST['producttitle'];
+            $price = $_POST['price'];
+            $network = $_POST['network'];
+            $launch = $_POST['launch'];
+            $body = $_POST['body'];
+            $display = $_POST['display'];
+            $platform = $_POST['platform'];
+            $internalmemory = $_POST['internalmemory'];
+            $camera = $_POST['camera'];
+            $sound = $_POST['sound'];
+            $comms = $_POST['comms'];
+            $feature = $_POST['feature'];
+            $battery = $_POST['battery'];
+            $misc = $_POST['misc'];
+            $ram = $_POST['ram'];
+            $externalmemory = $_POST['externalmemory'];
+            $os = $_POST['os'];
+            $gpu = $_POST['gpu'];
+            $whatgadget = $_POST['whatgadget'];
+            $whatoccupation = $_POST['whatoccupation'];
+            $whatfor = $_POST['whatfor'];
+            $wheretobuy = $_POST['wheretobuy'];
+            $brand = $_POST['brand'];
+            $picture = $_POST['picture'];
             $catalog_input = new Catalog_Input();
             $result = $catalog_input->evaluate($_POST);
             if($result == ""){
                 header("Location: admin_gadget_catalog.php", true, 301);
-                exit();
+                //exit();
             } else{
                 echo $result;
             }
         }
-        
+
         // $title = $_POST['title'];
         // $source = $_POST['source'];
         // $content = $_POST['content'];
@@ -93,7 +113,7 @@
         
     }
     
-    if (isset($_GET)){
+    if ($_GET && $_SERVER['REQUEST_METHOD']=='GET'){
     $id = $_GET['product'];
     $DB = new Database();
     $query = "SELECT * FROM product WHERE Product_ID=$id";
@@ -142,13 +162,15 @@
         </nav>
 
         <br></br>
+        <br></br>
+        <br>
         <?php
-        if (!isset($_GET['product'])) { ?>
-            <form action="admin_input_gadget.php" method="post" enctype="multipart/form-data">
-        <?php
-        } else { ?>
-            <form action="admin_input_gadget.php?product=<?php echo $_GET['product']; ?>" method="post" enctype="multipart/form-data">
-        <?php }
+            if (!isset($_GET['product'])) { ?>
+                <form action="admin_input_gadget.php" method="POST" enctype="multipart/form-data">
+            <?php
+            } else { ?>
+                <form action="admin_input_gadget.php?product=<?php echo $_GET['product']; ?>" method="POST" enctype="multipart/form-data">
+            <?php }
         ?>
         
         <!--form untuk input gadget-->
@@ -345,13 +367,11 @@
                 <div class="row">
                     <div class="col">
                         <?php
-                        if (!isset($result['ArticlePict'])) {?>
-                            <form>
+                        if (!isset($result['ProductPicture'])) {?>
                             <div class="form-group">
-                                <label for="exampleFormControlFile1">Article Picture</label><p></p>
+                                <label for="exampleFormControlFile1">Product Picture</label><p></p>
                                 <input name="picture" type="file" class="form-control-file" id="exampleFormControlFile1">
                             </div>
-                        </form>
                         <?php }?>
                     </div>
                     <div class="col">
@@ -365,7 +385,7 @@
                 </div>
                 <br></br>
                 <div class="text-center">
-                    <?php if(isset($_GET)) { ?>
+                    <?php if($_GET) { ?>
                         <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit" value="update">
                     <?php }else{ ?>
                         <input class="btn btn-primary btn-lg btn-info text-light" type="submit" name="submit" value="submit">

@@ -58,9 +58,15 @@ class Catalog_Input
             $query = "INSERT INTO product(ProductPicture, ProductPrice, ProductNetwork, ProductLaunch, ProductBody, ProductDisplay, ProductPlatform, ProductInternalMemory, 
             ProductCamera, ProductSound, ProductComms, ProductFeature, ProductBattery, ProductMisc, WhereToBuy, ProductRAM, ProductOS, ProductGPU, 
             ProductTitle, ProductBrand, ProductExternalMemory, WhatGadget, WhatOccupation, WhatFor) VALUES ('$name', '$price', '$network', '$launch', '$body', '$display', '$platform', '$internalmemory',
-            '$camera', '$sound', '$comms', '$feature', '$battery', '$misc', '$wheretobuy', '$ram', '$os', '$gpu', '$producttitle', '$brand', '$externalmemory', '$whatgadget', '$whatoccupation',
+            '$camera', '$sound', '$comms', '$feature', '$battery', '$misc', '$wheretobuy', $ram, '$os', '$gpu', '$producttitle', '$brand', '$externalmemory', '$whatgadget', '$whatoccupation',
             '$whatfor')";
+            // $query = "INSERT INTO product(ProductPicture, ProductPrice, ProductNetwork, ProductLaunch, ProductBody, ProductDisplay, ProductPlatform, ProductInternalMemory, 
+            // ProductCamera, ProductSound, ProductComms, ProductFeature, ProductBattery, ProductMisc, WhereToBuy, ProductRAM, ProductOS, ProductGPU, 
+            // ProductTitle, ProductBrand, ProductExternalMemory, WhatGadget, WhatOccupation, WhatFor) VALUES ('123', 123, '123', '123', '123', '123', '123', 123,
+            // 123, '123', '123', '123', '123', '123', '123', 123, '123', '123', '123', '123', '123', '123', '123',
+            // '123')";
             $cek = $DB->save($query);
+            echo $query;
             return $cek;
             // if ($cek) {
             //     header("Location: admin_article.php", true, 301);

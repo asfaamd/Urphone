@@ -2,10 +2,10 @@
     include("be_connect.php");
     $DB = new Database();
 
-$gadget = $_POST['gadget'];
-$penggunaan = $_POST['penggunaan'];
-$pekerjaan = $_POST['pekerjaan'];
-$budget = $_POST['budget'];
+    $gadget = $_POST['gadget'];
+    $penggunaan = $_POST['penggunaan'];
+    $pekerjaan = $_POST['pekerjaan'];
+    $budget = $_POST['budget'];
 
 // $query = "SELECT * FROM product";
     $query = "SELECT * FROM product WHERE ProductPrice<=" . $budget . " AND WhatFor='" . $penggunaan . "' AND WhatOccupation='" . $pekerjaan . "' AND WhatGadget='" . $gadget . "'";
@@ -95,6 +95,7 @@ $budget = $_POST['budget'];
             <?php
            }
             ?>
+        </div>
             
             <!-- <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
                 <div class="row g-0">
