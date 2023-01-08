@@ -332,6 +332,7 @@
                 <button type="submit" class="btn btn-primary btn-secondary text-light btn-xl">Send</button>
             </div>
         </form>
+        </div>
 
         <br></br>
         <br></br>

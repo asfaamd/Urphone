@@ -74,8 +74,8 @@ $result = $DB->read($query);
                                 <h5 class="card-title"><?php echo $product['ProductTitle']; ?></h5>
                                 <p><h7 class="card-text">Rp<?php echo $product['ProductPrice']; ?></h7>
                                 <p><a href="admin_catalog_page.php?product=<?php echo $product['Product_ID']; ?>" class="btn btn-primary btn-info text-light">Read More</a>
-                                <a href="admin_input_gadget.php?product=<?php echo $product['Product_ID']; ?>" class="btn btn-primary btn-info text-light">Update</a>
-                                <a href="delete_product.php?product=<?php echo $product['Product_ID']; ?>" class="btn btn-primary btn-info text-light">Delete</a>
+                                <a href="admin_input_gadget.php?product=<?php echo $product['Product_ID']; ?>" class="btn btn-primary btn-secondary btn-outline-light text-light">Update</a>
+                                <a href="delete_product.php?product=<?php echo $product['Product_ID']; ?>" class="btn btn-primary btn-danger text-light">Delete</a>
                             </div>
                         </div>
                     </div>
