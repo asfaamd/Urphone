@@ -7,8 +7,17 @@
     $pekerjaan = $_POST['pekerjaan'];
     $budget = $_POST['budget'];
 
+    $ram = $_POST['ram'];
+    $battery = $_POST['battery'];
+    $gpu = $_POST['gpu'];
+    $camera = $_POST['camera'];
+    $externalmemory = $_POST['externalmemory'];
+    $os = $_POST['os'];
+    $internalmemory = $_POST['internalmemory'];
+    $brand = $_POST['brand'];
+
 // $query = "SELECT * FROM product";
-    $query = "SELECT * FROM product WHERE ProductPrice<=" . $budget . " AND WhatFor='" . $penggunaan . "' AND WhatOccupation='" . $pekerjaan . "' AND WhatGadget='" . $gadget . "'";
+    $query = "SELECT * FROM product WHERE (ProductPrice<=" . $budget . " AND WhatFor='" . $penggunaan . "' AND WhatOccupation='" . $pekerjaan . "' AND WhatGadget='" . $gadget . "')";
     $result = $DB->read($query);
 
 ?>

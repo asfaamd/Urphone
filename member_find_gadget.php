@@ -189,13 +189,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md">
-                        <input type="text" class="form-control">
+                        <input name= "ram" type="text" class="form-control">
                     </div>
                     <div class="col-md">
-                        <input type="text" class="form-control">
+                        <input name="battery" type="text" class="form-control">
                     </div>
                     <div class="col-md">
-                        <input type="text" class="form-control">
+                        <input name="gpu" type="text" class="form-control">
                     </div>
                 </div>
             </div>
@@ -220,13 +220,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md">
-                        <input type="text" class="form-control">
+                        <input name="camera" type="text" class="form-control">
                     </div>
                     <div class="col-md">
-                        <input type="text" class="form-control">
+                        <input name="externalmemory" type="text" class="form-control">
                     </div>
                     <div class="col-md">
-                        <input type="text" class="form-control">
+                        <input name="os" type="text" class="form-control">
                     </div>
                 </div>
             </div>
@@ -239,9 +239,9 @@
                     <div class="col">
                         <h6>Internal memory (in GB)</h6>
                     </div>
-                    <div class="col">
+                    <!-- <div class="col">
                         <h6>Screen size (in inch)</h6>
-                    </div>
+                    </div> -->
                     <div class="col">
                         <h6>Brand</h6>
                     </div>
@@ -251,13 +251,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md">
-                        <input type="text" class="form-control">
+                        <input name="internalmemory" type="text" class="form-control">
                     </div>
+                    <!-- <div class="col-md">
+                        <input name="" value="" type="text" class="form-control">
+                    </div> -->
                     <div class="col-md">
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="col-md">
-                        <input type="text" class="form-control">
+                        <input name="brand" type="text" class="form-control">
                     </div>
                 </div>
             </div>
