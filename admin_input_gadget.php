@@ -143,7 +143,7 @@
 
         <br></br>
         <?php
-        if (!isset($_GET)) { ?>
+        if (!isset($_GET['product'])) { ?>
             <form action="admin_input_gadget.php" method="post" enctype="multipart/form-data">
         <?php
         } else { ?>

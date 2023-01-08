@@ -1,6 +1,6 @@
 <?php
     session_start();
-    
+
     include("be_connect.php");
     include("be_admin_articles.php");
 
@@ -11,38 +11,36 @@
     $picture = "";
     $query = "";
 
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $title = $_POST['title'];
         $source = $_POST['source'];
         $content = $_POST['content'];
         $summary = $_POST['summary'];
         $picture = $_POST['name'];
-        if(isset($_GET)){
-            $id = $_GET['article'];
-            $query = "UPDATE article SET ArticleTitle= '".$title."', ArticleContent='".$content.
-            "', ArticleSource= '".$source."', ArticleSummary ='".$summary."' WHERE ArticleID=".$id;
+        if (isset($_GET)) {
+            $id = $_GET['id'];
+            $query = "UPDATE article SET ArticleTitle= '" . $title . "', ArticleContent='" . $content .
+                "', ArticleSource= '" . $source . "', ArticleSummary ='" . $summary . "' WHERE ArticleID=" . $id;
             $DB = new Database();
             $result = $DB->save($query);
             header("Location: admin_articles.php", true, 301);
-        } else{
+        } else {
             $article_input = new Articles_Input();
             $result = $article_input->evaluate($_POST);
 
-            if($result == ""){
+            if ($result == "") {
                 header("Location: admin_articles.php", true, 301);
                 exit();
-            } else{
+            } else {
                 echo $result;
             }
             // $email = $_POST['email'];
             // $password = $_POST['password'];
-        
         }
-
     }
     
     if (isset($_GET) && $_SERVER['REQUEST_METHOD']=='GET'){
-        $id = $_GET['article'];
+        $id = $_GET['articleid'];
         $DB = new Database();
         $query = "SELECT * FROM article WHERE ArticleID=$id";
         $result = $DB->read($query)[0];
