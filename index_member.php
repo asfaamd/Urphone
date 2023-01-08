@@ -3,7 +3,7 @@
     include("be_connect.php");
     $DB = new Database();
     $id_produk = $_GET['id'];
-    $query = "SELECT * FROM review WHERE Product_ID='" . $id_produk . "' LIMIT 2";
+    $query = "SELECT * FROM review LIMIT 2";
     $hasil = $DB->read($query);
 ?>
 

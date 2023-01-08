@@ -1,9 +1,9 @@
 <?php
-    session_start();
+    //session_start();
     include("be_connect.php");
     $DB = new Database();
-    $id_produk = $_GET['id'];
-    $query = "SELECT * FROM review WHERE Product_ID='" . $id_produk . "'";
+    //$id_produk = $_GET['id'];
+    $query = "SELECT * FROM review";
     $hasil = $DB->read($query);
 ?>
 
@@ -49,6 +49,7 @@
 
         <br></br>
         <br></br>
+        </br>
         <!--Title-->
         <div class="container">
             <div class="row">
