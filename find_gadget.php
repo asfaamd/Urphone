@@ -91,6 +91,7 @@
                             <option value="doing">Doing Homework</option>
                             <option value="data">Data Processing</option>
                             <option value="designing">Designing</option>
+                            <option value="gaming">Gaming</option>
                         </select>
                         <!-- <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             What do you use the gadget for?
