@@ -1,7 +1,8 @@
 <?php
 include("be_connect.php");
 $DB = new Database();
-$query = "SELECT * FROM article";
+//$query = "SELECT * FROM article DESC";
+$query = "SELECT * FROM article ORDER BY ArticleID DESC";
 $result = $DB->read($query);
 ?>
 
