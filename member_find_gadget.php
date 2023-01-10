@@ -70,7 +70,7 @@
                             <option value="smartphone">Smartphone</option>
                             <option value="tablet">Tablet</option>
                             <option value="laptop">Laptop</option>
-                            <option value="smart_watch">Smart watch</option>
+                            <option value="smart watch">Smart watch</option>
                             <option value="headphones">Headphones</option>
                         </select>
 
@@ -89,8 +89,8 @@
                         <select name="penggunaan" class="btn btn-secondary btn-lg dropdown-toggle">
                             <option value="coding">Coding</option>
                             <option value="drawing">Drawing</option>
-                            <option value="doing">Doing Homework</option>
-                            <option value="data">Data Processing</option>
+                            <option value="doing homework">Doing Homework</option>
+                            <option value="data processing">Data Processing</option>
                             <option value="designing">Designing</option>
                             <option value="gaming">Gaming</option>
                         </select>

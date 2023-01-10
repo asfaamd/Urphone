@@ -88,8 +88,8 @@
                         <select name="penggunaan" class="btn btn-secondary btn-lg dropdown-toggle">
                             <option value="coding">Coding</option>
                             <option value="drawing">Drawing</option>
-                            <option value="doing">Doing Homework</option>
-                            <option value="data">Data Processing</option>
+                            <option value="doing homework">Doing Homework</option>
+                            <option value="data processing">Data Processing</option>
                             <option value="designing">Designing</option>
                             <option value="gaming">Gaming</option>
                         </select>
