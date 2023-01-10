@@ -208,59 +208,7 @@ $result = $DB->read($query)[0];
 
         <br></br>
         
-        <!--User reviews-->
-        <div class="container">
-            <h2 class="text-secondary">User reviews</h2>
-            </br>
-            <div class="card bg-secondary text-light">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <h6 class="text-info">J'ametie the dancing girl</h6>
-                        </div>
-                        <div class="col-lg-4">
-                            <p class="text-muted">11/11/2022</p>
-                        </div>
-                    </div>
-                    <p>Ini adalah komen, komen komen komen. Ayo semuanya komen lalalala lalalallala lalallalalala</p>
-                    <p>4/5 rating</p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            </br>
-            <div class="card bg-secondary text-light">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <h6 class="text-info">Ahmad Samarinda</h6>
-                        </div>
-                        <div class="col-lg-4">
-                            <p class="text-muted">11/11/2022</p>
-                        </div>
-                    </div>
-                    <p>Ini adalah komen, komen komen komen. Ayo semuanya komen lalalala lalalallala lalallalalala</p>
-                    <p>4/5 rating</p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            </br>
-            <div class="card bg-secondary text-light">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <h6 class="text-info">Ahmad Samarinda</h6>
-                        </div>
-                        <div class="col-lg-4">
-                            <p class="text-muted">11/11/2022</p>
-                        </div>
-                    </div>
-                    <p>Ini adalah komen, komen komen komen. Ayo semuanya komen lalalala lalalallala lalallalalala</p>
-                    <p>4/5 rating</p>
-                </div>
-            </div>
-        </div>        
+        <!--User reviews-->      
         <br></br>
         <br></br>
         <!-- Footer-->
