@@ -21,7 +21,8 @@
             $username = $data['username'];
             $password = $data['password'];
             $email = $data['email'];
-            $query = "insert into member(MemberEmail, MemberPassword, MemberName) values('$email','$password','$username')";
+            $query = "insert into member(MemberEmail, MemberPassword, MemberName) 
+            values('$email','$password','$username')";
             $DB = new Database();
             $DB->save($query);
         }

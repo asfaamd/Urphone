@@ -36,7 +36,8 @@ class Articles_Input
             $data = file_get_contents($file['tmp_name']);
             move_uploaded_file($file['tmp_name'], 'C:\\xampp\\htdocs\\urphone\\assets\\img\\' . $file['name']);
             $name = $file['name'];
-            $query = "INSERT INTO article(ArticleTitle, ArticlePict, ArticleContent, ArticleSource, ArticleSummary, UserID) VALUES ('$title','$name','$content','$source','$summary','$user')";
+            $query = "INSERT INTO article(ArticleTitle, ArticlePict, ArticleContent, ArticleSource, 
+            ArticleSummary, UserID) VALUES ('$title','$name','$content','$source','$summary','$user')";
             $cek = $DB->save($query);
             return $cek;
             // if ($cek) {
