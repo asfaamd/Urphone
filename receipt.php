@@ -1,10 +1,11 @@
 <?php
-    //start the session
     session_start();
-    //retrieve the total price from session
+    include("be_connect.php");
+    $DB = new Database();
     $total_harga = $_POST['total_harga'];
-    //retrieve the money inserted in the form
     $money = $_POST['money'];
+    $query = "SELECT * FROM wishlist WHERE Member_ID=" . $_SESSION['urphone_MemberID'];
+    $res = $DB->read($query);
 ?>
 
 <!DOCTYPE html>
@@ -63,23 +64,55 @@
                 <div class="container">
                 <h4>
                 <?php
-                if(isset($money) && $money >= $total_harga){
-                    //echo "Payment Successful";
-                    ?>Transaction total : <?php echo $total_harga;?>
+                if($money >= $total_harga){?>
+                    <div class="text-center">
+                        <h2>=== Thanks for Shopping with UrPhone ===</h2>
+                        <br>
+                    </div>
+                    <?php
+                        if ($res) {
+                            foreach ($res as $item) {
+                                $query = "SELECT * FROM product WHERE Product_ID=" . $item['Product_ID'];
+                                $wish = $DB->read($query)[0];
+                                echo $wish['ProductTitle'];
+                                echo "   .....................................................................................................   ";
+                                echo $wish['ProductPrice'];
+                                ?>
+                                <br>
+                                <?php
+                                echo "\n";
+                            }
+                        }
+             ?>
+                    <br>
+                    <br>
+                    ===========================================================================
+                    <br>
+                    <br>
+                    Transaction total : <?php echo $total_harga;?>
                     <br> Money paid : 
                     <?php echo $money?>
                     <br> Total change :
-                    <?php echo $money - $total_harga;
-                    //process the payment
-                    //You can do some database operation here to store the payment information 
+                    <?php
+                    $money = intval($money);
+                    $total_harga = intval($total_harga);
+                    echo $money - $total_harga;
+                    $query = "SELECT * FROM member WHERE MemberID=".$_SESSION['urphone_MemberID'];
+                    $result = $DB->read($query)[0];
+                    $email = $result['MemberEmail'];?>
+                    <br>
+                    Email :
+                    <?php
+                    echo $email;
                 }else{
-                    //echo "Payment Unsuccessful, please insert enough money";
+                    echo "Payment Unsuccessful, please insert enough money";
                 }
                 ?>
                 </h4>
                 </div>
             <br>
-            </div>  
+            </div>
+            <p><a href="wishlist.php" class="btn btn- btn-info text-light">Go back</a>  
         </div>
 
 
