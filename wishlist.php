@@ -87,25 +87,27 @@ $res = $DB->read($query);
             <?php }
             } ?>
             </div>
-            
-            <!-- <div class="card border-secondary text-white bg-secondary mb-3" style="w-100;">
-                <div class="row g-0">
-                    <div class="col-md-4" style="max-width:210px">
-                        <img src="jam.jpg" class="img-fluid rounded-start" alt="Ini gambar">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Apple Watch Series 6</h5>
-                            <p><h7 class="card-text">Rp2.000.000</h7>
-                            <p><h7 class="card-text">rating 4/5</h7> <h7 class="card-text">(50 reviews)</h7>
-                            <p><a href="catalog_member.php" class="btn btn- btn-info text-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
-        
+        <div class="container">
+        <?php
+            if ($res) {
+                $total_harga = 0;
+                foreach ($res as $item) {
+                    $query = "SELECT * FROM product WHERE Product_ID=" . $item['Product_ID'];
+                    $wish = $DB->read($query)[0];
+                    $total_harga += $wish['ProductPrice'];
+            ?>
+            <?php }
+            }
+             ?>
+            <h3>Total harga : <?= $total_harga; ?></h3>
+            <!-- <a href="#" class="btn btn- btn-info text-light">Checkout</a> -->
+            <form action="checkout.php" method="post">
+                <input type="hidden" name="total_harga" value="<?php echo $total_harga; ?>">
+                <input type="submit" value="Checkout" class="btn btn- btn-info text-light">
+            </form>
+        </div>
+
         <br>
         </br>
 
